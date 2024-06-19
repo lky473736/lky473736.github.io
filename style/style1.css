@@ -6,22 +6,26 @@
 
 @font-face {
     font-family: 'playfair display';
-    src: url('media/font/font_playfair.ttf');
+    src: url('../media/font/font_playfair.ttf') format('ttf'),
+	url('../media/font/font_playfair.otf') format('otf');
 }
 
 @font-face {
     font-family : 'pretendard';
-    src : url('media/font/font_pretendard.otf');
+    src : url('../media/font/font_pretendard.ttf') format('ttf'),
+	url('../media/font/font_pretendard.otf') format('otf');
 }
 
 @font-face {
     font-family : 'pretendard_bold';
-    src : url('media/font/font_pretendard_bold.otf');
+    src : url('../media/font/font_pretendard_bold.ttf') format('ttf'),
+	url('../media/font/font_pretendard_bold.otf') format('otf');
 }
 
 @font-face {
     font-family : 'pretendard_thin';
-    src : url('media/font/font_pretendard_thin.otf');
+    src : url('../media/font/font_pretendard_thin.ttf') format('ttf'),
+	url('../media/font/font_pretendard_thin.otf') format('otf');
 }
 
 @keyframes opening_text{
