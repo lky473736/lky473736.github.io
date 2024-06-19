@@ -1,0 +1,244 @@
+<!--
+    임규연 lky473736
+    about.html
+
+    awards 페이지
+    - 그동안의 수상 이력을 table을 통하여 구현
+    - 수상 이력을 구분하기 위해 css로 마크업을 진행
+    - keyframes을 사용하여 awards 페이지와 proj 페이지 간 이동이 자유롭게 함, 시각적으로 표현
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/style1.css">
+    <link rel="stylesheet" href="../style/style2.css">
+    <link rel="stylesheet" href="../style/style3.css">
+    <link rel="stylesheet" href="../style/style4.css">
+    <title>Awards</title>
+    <style>
+        @keyframes crossover {
+            from {
+                background-color: white;
+            }
+            to {
+                background-color : rgba(211, 211, 211, 0.25);
+                border-bottom: 1px solid black;
+            }
+        }
+
+        .crossover-hover {
+            animation: crossover 0.5s ease-in-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <a href="menu.html" class="button" id="menu">menu</a>
+    <span style="position: relative; top: 20px; left: 55px; font-family: 'playfair display'; font-size: 17px;">
+        You can see the specific information about me!
+    </span>
+    &nbsp;
+
+    <a href="mailto:lky473736@icloud.com"><input type="button" class="button image" id="email" onclick="alert('mail to lky473736...');"></a>
+    <a href="https://github.com/lky473736"><input type="button" class="button image" id="github"></a>
+    
+    <div id="line"></div>
+
+    <!--============================-->
+
+    <div class="proj_and_awards" id="description">
+        <span style="font-family: 'playfair display'; font-size: 30px;">Projects and Awards</span>
+        <br>
+        <br>
+
+        <table class="crossover">
+            <tr style="font-family: 'playfair display'">
+                <td class="component" style="border-bottom: 1px solid black;" onclick="location.href='proj.html'">
+                    Projects
+                </td>
+                <td class="component" id="focus" style="border-bottom: 0px solid white;" onclick="location.href='awards.html'">
+                    Awards
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <p id="top" style="margin-bottom : 60px">저와 함께해준 분들 덕분에 <span id='specific'><b>제게는 과분한 좋은 상을 받았습니다.</b></span></p>
+
+        <p><span style="margin-bottom : 30px">제가 받은 상들은 저만 이뤄낸 휘장이 아닙니다. 저와 함께해준 팀원들과 밤새 노력하였기 때문에 받아낸 모두의 결실이라고 생각하면서 늘 고마워하고 있습니다.</span></p>
+
+        <br>
+        <br>
+
+        <table id="awards">
+            <thead>
+                <tr>
+                    <th>연도</th>
+                    <th>상태</th>
+                    <th>이름</th>
+                    <th>속성</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="right">2018</td>
+                    <td><span class="badge badge-success">수상실적</span></td>
+                    <td>경기도과학발명경진대회</td>
+                    <td>1위 (최우수)</td>
+                </tr>
+                <tr>
+                    <td align="right">2018</td>
+                    <td><span class="badge badge-success">수상실적</span></td>
+                    <td>전국학생과학발명경진대회</td>
+                    <td>해양수산부장관상</td>
+                </tr>
+                <tr>
+                    <td align="right">2020</td>
+                    <td><span class="badge badge-success">수상실적</span></td>
+                    <td>효성고등학교 논문대회</td>
+                    <td>2위 (<a style="color : #0000007f;" href="https://github.com/lky473736/red-ocean">RED-OCEAN</a>)</td>
+                </tr>
+                <tr>
+                    <td align="right">2020</td>
+                    <td><span class="badge badge-success">수상실적</span></td>
+                    <td>경기도과학발명경진대회</td>
+                    <td>우수 (SLAP!)</td>
+                </tr>
+                <tr>
+                    <td align="right">2021</td>
+                    <td><span class="badge badge-info">교내활동</span></td>
+                    <td>효성고등학교 MUST 프로그래밍 클래스</td>
+                    <td>main tutor</td>
+                </tr>
+                <tr>
+                    <td align="right">2021</td>
+                    <td><span class="badge badge-success">수상실적</span></td>
+                    <td>효성고등학교 논문대회</td>
+                    <td>2위 (<a style="color : #0000007f;" href="https://github.com/lky473736/half">HALF</a>)</td>
+                </tr>
+                <tr>
+                    <td align="right">2022</td>
+                    <td><span class="badge badge-warning">외부활동</span></td>
+                    <td>WWDC 2022</td>
+                    <td>at Apple Computer</td>
+                </tr>
+                <tr>
+                    <td align="right">2023</td>
+                    <td><span class="badge badge-success">수상실적</span></td>
+                    <td>가천대학교 가천핵심역량진단 보고서 공모전</td>
+                    <td>3위 (장려)</td>
+                </tr>
+                <tr>
+                    <td align="right">2023</td>
+                    <td><span class="badge badge-info">교내활동</span></td>
+                    <td>가천대학교 &lt;chatGPT 심포지엄 1&gt; 오프라인 참여</td>
+                    <td>가천대학교 창업대학 주최</td>
+                </tr>
+                <tr>
+                    <td align="right">2023</td>
+                    <td><span class="badge badge-success">수상실적</span></td>
+                    <td>가천대학교 컴퓨터공학전공 창의-NTree</td>
+                    <td>도전-협동상</td>
+                </tr>
+                <tr>
+                    <td align="right">2023</td>
+                    <td><span class="badge badge-info">교내활동</span></td>
+                    <td>가천대학교 &lt;chatGPT 심포지엄 2&gt; 오프라인 참여</td>
+                    <td>가천대학교 창업대학 주최</td>
+                </tr>
+                <tr>
+                    <td align="right">2023</td>
+                    <td><span class="badge badge-warning">외부활동</span></td>
+                    <td>WWDC 2023</td>
+                    <td>at Apple Computer as developer</td>
+                </tr>
+                <tr>
+                    <td align="right">2023</td>
+                    <td><span class="badge badge-success">수상실적</span></td>
+                    <td>가천대학교 소프트웨어 경진대회</td>
+                    <td>대상 (<a style="color : #0000007f;" href="https://github.com/lky473736/homeautomationwitharduino">homeautomationwitharduino</a>)</td>
+                </tr>
+                <tr>
+                    <td align="right">2023</td>
+                    <td><span class="badge badge-warning">외부활동</span></td>
+                    <td>NAVER SEF2023</td>
+                    <td><a style="color : #0000007f;" href="https://sef.connect.or.kr/2023">SEF major developper</a></td>
+                </tr>
+                <tr>
+                    <td align="right">2023</td>
+                    <td><span class="badge badge-success">수상실적</span></td>
+                    <td>가천대학교 전공융합창의력대회</td>
+                    <td>4등상 (예측형 이차전지 배터리 관리-교체 시스템)</td>
+                </tr>
+                <tr>
+                    <td align="right">2023</td>
+                    <td><span class="badge badge-success">수상실적</span></td>
+                    <td>가천대학교 가천핵심역량진단 보고서 공모전 (2차)</td>
+                    <td>3위 (장려)</td>
+                </tr>
+                <tr>
+                    <td align="right">2023</td>
+                    <td><span class="badge badge-success">수상실적</span></td>
+                    <td>가천대학교 학습공동체</td>
+                    <td>3위 (장려)</td>
+                </tr>
+                <tr>
+                    <td align="right">2024</td>
+                    <td><span class="badge badge-success">수상실적</span></td>
+                    <td>가천대학교 내(來:미래)진(進:나아가다)설계 프로젝트</td>
+                    <td>1위 (최우수, 
+                    <a style="color : #0000007f;" href="https://github.com/lky473736/djangoclass/tree/main">djangoclass</a>)</td>
+                </tr>
+                <tr>
+                    <td align="right">2024</td>
+                    <td><span class="badge badge-success">수상실적</span></td>
+                    <td>안양과천상공회의소 회원업체 이공계우수장학생 장학금</td>
+                    <td>최우수 장학금 수령</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="button" id="upb"><b>↑</b></div>
+
+    <script>
+        document.getElementById('upb').addEventListener('click', function() {
+            window.location.href = '#menu';
+        });
+    </script>
+
+    <script>
+        var element = "";
+
+        document.addEventListener('mousemove', function(event) {
+            element = event.target;
+        });
+
+        document.querySelectorAll('td.component').forEach(function(td) {
+            td.addEventListener('mouseover', function() {
+                td.classList.add('crossover-hover');
+            });
+
+            td.addEventListener('mouseout', function() {
+                if (element.id !== "focus") {
+                    td.classList.remove('crossover-hover');
+                    td.style.borderBottom = '0px solid white';
+                    td.style.background = 'white';
+                }
+            });
+        });
+    </script>
+
+    <div id="line"></div>
+    <div style="display : flex; justify-content : center; align-items : center; text-align : center;">
+        <p>
+            <b>임규연 @ lky473736</b> <br>
+            <b>Copyright 2024. 임규연, All pictures cannot be copied without permission.</b>
+        </p>
+    </div>
+    <br>
+</body>
+</html>

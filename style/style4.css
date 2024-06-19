@@ -1,0 +1,33 @@
+/*
+    임규연 lky473736
+    style4.css 
+    contact 페이지
+*/
+
+@keyframes appear {
+    from {
+        opacity : 0;
+    }
+
+    to {
+        opacity : 1;
+    }
+}
+
+#description {
+    animation : appear 1s linear normal forwards;
+}
+
+
+.contact#description {
+    margin : 100px 200px 0px 200px;
+    font-family : 'pretendard_thin';
+    line-height: 1.5;
+    font-size : 20px;
+}
+
+div.contact#description > p#top {
+    color : rgba(128, 128, 128, 0.598);
+    font-size : 30px;
+    font-weight: 350;
+}

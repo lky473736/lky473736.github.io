@@ -1,0 +1,130 @@
+/*
+    임규연 lky473736
+    style3.css 
+    projects 페이지, awards 페이지
+*/
+
+.proj_and_awards#description {
+    margin : 100px 200px 0px 200px;
+    font-family : 'pretendard_thin';
+    line-height: 1.5;
+    font-size : 20px;
+}
+
+.proj_and_awards#description > table.crossover {
+    width: 100%;
+    border-collapse: collapse; /* 테이블의 경계를 합쳐서 깔끔하게 만듦 */
+    text-align : center;
+    height : 50px;
+    border : 0.5px solid lightgray;
+}
+
+.proj_and_awards .linkbox img {
+    display : inline;
+    float : right;
+    width : 25px;
+}
+
+.proj_and_awards#description {
+    margin : 100px 200px 0px 200px;
+    font-family : 'pretendard_thin';
+    line-height: 1.5;
+    font-size : 20px;
+}
+
+div.proj_and_awards#description > p#top {
+    color : rgba(128, 128, 128, 0.598);
+    font-size : 30px;
+    font-weight: 350;
+}
+
+#term {
+    float : right;
+    color : rgba(128, 128, 128, 0.552);
+    font-size : 0.8em;
+}
+
+.proj_and_awards#description > ul > li {
+    margin-bottom : 20px;
+}
+
+.proj_and_awards#description > ul > li > ul {
+    font-size : 17px;
+}
+
+li::marker {
+    content : '✓ ';
+    color : rgb(66, 91, 172);
+}
+
+table#awards {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    table-layout: fixed;
+}
+
+#awards th, #awards td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #dddddd;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#awards th {
+    background-color: #f2f2f2;
+}
+
+#awards td {
+    font-size : 17px;
+}
+
+#awards tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#awards tr:hover {
+    background-color: #f1f1f1;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+.badge-success {
+    background-color: #5cb85c;
+}
+
+.badge-info {
+    background-color: #5bc0de;
+}
+
+.badge-warning {
+    background-color: #f0ad4e;
+}
+
+#awards th:nth-child(1), #awards td:nth-child(1) {
+    width: 5%;
+}
+
+#awards th:nth-child(2), #awards td:nth-child(2) {
+    width: 10%;
+}
+
+#awards th:nth-child(3), #awards td:nth-child(3) {
+    width: 45%;
+}
+
+#awards th:nth-child(4), #awards td:nth-child(4) {
+    width: 40%;
+}

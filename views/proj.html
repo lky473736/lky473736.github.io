@@ -1,0 +1,217 @@
+<!--
+    임규연 lky473736
+    proj.html
+
+    proj 페이지
+    - 그동안 한 프로젝트를 ul태그와 li 태그로 계층적 표현
+    - awards 페이지와 유동적으로 이동하기 위한 크로스오버 테이블 도입
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/style1.css">
+    <link rel="stylesheet" href="../style/style2.css">
+    <link rel="stylesheet" href="../style/style3.css">
+    <link rel="stylesheet" href="../style/style4.css">
+    <title>Projects</title>
+    <style>
+        @keyframes crossover {
+            from {
+                background-color: white;
+            }
+            to {
+                background-color : rgba(211, 211, 211, 0.25);
+                border-bottom: 1px solid black;
+            }
+        }
+
+        .crossover-hover {
+            animation: crossover 0.5s ease-in-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <a href="menu.html" class="button" id="menu">menu</a>
+    <span style="position: relative; top: 20px; left: 55px; font-family: 'playfair display'; font-size: 17px;">
+        You can see the specific information about me!
+    </span>
+    &nbsp;
+
+    <a href="mailto:lky473736@icloud.com"><input type="button" class="button image" id="email" onclick="alert('mail to lky473736...');"></a>
+    <a href="https://github.com/lky473736"><input type="button" class="button image" id="github"></a>
+    
+    <div id="line"></div>
+
+    <!--============================-->
+
+    <div class="proj_and_awards" id="description">
+        <span style="font-family: 'playfair display'; font-size: 30px;">Projects and Awards</span>
+        <br>
+        <br>
+
+        <table class="crossover">
+            <tr style="font-family: 'playfair display'">
+                <td class="component" id="focus" style="border-bottom: 1px solid black;" onclick="location.href='proj.html'">
+                    Projects
+                </td>
+                <td class="component" style="border-bottom: 0px solid white;" onclick="location.href='awards.html'">
+                    Awards
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <p id="top" style="margin-bottom : 60px">독단적으로 빛나지 않고, <span id="specific"><b>팀원 모두가 빛날 수 있는 프로젝트</b></span>를 합니다.</p>
+
+        <p><span style="margin-bottom : 30px">기술을 통해 세상을 이롭게 하려면, 저 혼자만의 독단적인 행동만으로는 불가능합니다. 각자의 스테이크홀더가 요구사항의 외적 요소 및 내적 요소를 전부 확인하고 이해하여 자신의 역할을 확실히 알고, 책임감을 가지면서 프로젝트에 임해야 합니다.</span></p>
+
+        <br>
+        <br>
+
+        <img src="../media/img/fig/fig_alphamech.png" alt="fig tutoring">
+        <span style="float : right; font-size : 15px">@ AlphaMech_ (2022 - 1)</span>
+
+        <br>
+        <br>
+        <br>
+
+        <p>
+            위 Figure은 제가 효성고등학교에 재학할 때 만든 융합공학동아리 <a style="color : #0000007f;" href="https://lky473736.wixsite.com/alphamech">AlphaMech_<img style="width : 25px; " src="../media/img/icon/icon_link.png"></a>의 단체사진입니다. 공학도를 꿈꾸는 학생들이 모여 발칙하고 멍청한 망상을 어떻게든 현실로 재현하기 위하여 만들어진 동아리로, 작은 양초로 무거운 스털링 엔진을 구현하거나 라즈베리파이를 활용하여 비트코인을 채굴하는 등 현실적으로 불가능한 프로젝트를 많이 진행하였습니다.
+        </p>
+
+        <p>
+            저는 아무래도 이 동아리를 이끌면서 협업의 중요성을 스스로 깨우쳤습니다. 어차피 결과는 좋지 않을테니, 모두가 각자의 역할에 충실하며 프로젝트를 이행하는 과정을 사랑하면 어떨까라는 생각에, 이때부터 소프트웨어공학을 적용하고 다이어그램을 손수 그려가면서 해야 할 스크럼들을 정리해나갔습니다.
+        </p>
+
+        <p>
+            모든 사람들이 자신이 맡은 바를 즐거워할 때 그것이 바로 살아있는 프로젝트라고 생각합니다. <br>
+            저는 살아있는 프로젝트를 하기 위해 노력합니다.
+        </p>
+        
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        <ul>
+            <li><a style="color : #000000;" href="https://github.com/lky473736/scarecrow"><b>허수아비 : 집념의 들판 (scarecrow)</b>&nbsp;<img style="width : 25px; " src="../media/img/icon/icon_link.png"></a>
+                <span id="term">2020. 3 - 2021. 9</span>
+                <ul>
+                    <li>코로나19로 인한 비대면 화상강의 시즌, ZOOM 화상회의 자동 접속 프로그램</li>
+                    <li>AlphaMech_ 주관, 허수아비 프로그래밍부 (임규연, 정찬하, 장문규, 변호석, 박재석)</li>
+                    <li>HTML, C/C++</li>
+                </ul>
+            </li>
+            <li>
+                <a style="color : #000000;" href="https://github.com/lky473736/red-ocean"><b>RED-OCEAN</b>&nbsp;<img style="width : 25px; " src="../media/img/icon/icon_link.png"></a>
+                <span id="term">2020. 7 - 2020. 11</span>
+                <ul>
+                    <li>COVID-19의 metadata와 SIR model을 이용한 감염 시뮬레이션 시스템</li>
+                    <li>임규연, 이진서, 임유찬</li>
+                    <li>2020년도 효성고등학교 과학논문대회 최우수상 수상 (2위)</li>
+                    <li>Python, Matlab, Processing 3, C++</li>
+                </ul>
+            </li>
+            <li>
+                <a style="color : #000000;" href="https://github.com/lky473736/half"><b>HALF</b>&nbsp;<img style="width : 25px; " src="../media/img/icon/icon_link.png"></a>
+                <span id="term">2021. 2 - 2021. 12</span>
+                <ul>
+                    <li>감정들에 대한 반응을 대조할 수 있는 이차원 인공지능, 사용자의 표정을 읽고 그에 따른 감정을 추측</li>
+                    <li>임규연, 손영준, 권도훈</li>
+                    <li>2021년도 효성고등학교 과학논문대회 최우수상 수상 (2위)</li>
+                    <li>Python, Keras, C++, Teachable Machine, HTML</li>
+                </ul>
+            </li>
+            <li>
+                <a style="color : #000000;" href="https://github.com/lky473736/problemsolving"><b>problemsolving</b>&nbsp;<img style="width : 25px; " src="../media/img/icon/icon_link.png"></a>
+                <span id="term">2023. 3 - 현재</span>
+                <ul>
+                    <li>하루 1문제 코딩테스트 루틴 및 컴퓨터공학전공생들을 위한 연습문제 배포</li>
+                    <li>임규연</li>
+                    <li>대부분 Python 3으로 문제풀이</li>
+                </ul>
+            </li>
+            <li>
+                <a style="color : #000000;" href="https://github.com/lky473736/homeautomationwitharduino"><b>homeautomationwitharduino</b>&nbsp;<img style="width : 25px; " src="../media/img/icon/icon_link.png"></a>
+                <span id="term">2023. 6</span>
+                <ul>
+                    <li>피지컬 컴퓨팅으로 구현하는 홈 오토메이션 (스마트홈)</li>
+                    <li>TEAM 16 (이호현, 이현호, 임규연, 임승기)</li>
+                    <li>2023년도 가천대학교 소프트웨어 경진대회 SW일반부문 대상 수상 (1위)</li>
+                    <li>Arduino, C++ for HW, Port Engineering, Remote Control</li>
+                </ul>
+            </li>
+            <li>
+                <a style="color : #000000;" href="https://github.com/lky473736/djangoclass"><b>djangoclass</b>&nbsp;<img style="width : 25px; " src="../media/img/icon/icon_link.png"></a>
+                <span id="term">2023. 9 - 2023. 12</span>
+                <ul><li>개발자 내(來:미래)진(進:나아가다)설계를 위한 내(耐:견디다)진(震:역경)설계</li>
+                <li>2023년도 2학기 동안 진행됨 / 임규연</li>
+                <li>2023년도 가천대학교 아르테크네 주관 내(來:미래)진(進:나아가다)설계 프로젝트 최우수상 (1위)</li>
+                <li>Python, Django, Flask, HTML, Javascript, Backend Framework concept</li>
+            </ul>
+            </li>
+            <li>
+                <a style="color : #000000;" href="https://github.com/lky473736/forum-express"><b>forum-express</b>&nbsp;<img style="width : 25px; " src="../media/img/icon/icon_link.png"></a>
+                <span id="term">2024. 2</span>
+                <ul><li>게시판 양식을 직접 만들어보고 CRUD 원리를 익히기 위한 웹 프로젝트</li>
+                <li>2024년도 2월 동안 진행됨 / 임규연</li>
+                <li>express.js, Node.js</li>
+                </ul>
+            </li>
+            <li>
+                <a style="color : #000000;" href="https://github.com/lky473736/freund"><b>freund</b>&nbsp;<img style="width : 25px; " src="../media/img/icon/icon_link.png"></a>
+                <span id="term">2024. 4 - 현재</span>
+                <ul>
+                    <li>차원 음성 인식을 적용한 LLM 모델 구현</li>
+                    <li>2024년도 4월 부터 진행 중 / 임규연</li>
+                    <li>Python, C++, Tensorflow, whisper, llama.cpp, keras</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="button" id="upb"><b>↑</b></div>
+
+    <script>
+        document.getElementById('upb').addEventListener('click', function() {
+            window.location.href = '#menu';
+        });
+    </script>
+
+    <script>
+        var element = "";
+
+        document.addEventListener('mousemove', function(event) {
+            element = event.target;
+        });
+
+        document.querySelectorAll('td.component').forEach(function(td) {
+            td.addEventListener('mouseover', function() {
+                td.classList.add('crossover-hover');
+            });
+
+            td.addEventListener('mouseout', function() {
+                if (element.id !== "focus") {
+                    td.classList.remove('crossover-hover');
+                    td.style.borderBottom = '0px solid white';
+                    td.style.background = 'white';
+                }
+            });
+        });
+    </script>
+
+    <div id="line"></div>
+    <div style="display : flex; justify-content : center; align-items : center; text-align : center;">
+        <p style="font-family : 'pretendard_thin'">
+            <b>임규연 @ lky473736</b> <br>
+            <b>Copyright 2024. 임규연, All pictures cannot be copied without permission.</b>
+        </p>
+    </div>
+    <br>
+</body>
+</html>

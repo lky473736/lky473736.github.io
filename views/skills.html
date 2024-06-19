@@ -1,0 +1,234 @@
+<!--
+    임규연 lky473736
+    skills.html
+
+    skills 페이지
+    - 내가 할 수 있는 모든 프레임워크 및 테크의 숙련도를 표현하고자 막대그래프를 형상화함
+    - animation을 사용하여 점점 차오르는 각각을 표현
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/style1.css">
+    <link rel="stylesheet" href="../style/style2.css">
+    <link rel="stylesheet" href="../style/style3.css">
+    <link rel="stylesheet" href="../style/style4.css">
+    <title>Skills</title>
+    <style>
+        @keyframes crossover {
+            from {
+                background-color: white;
+            }
+            to {
+                background-color : rgba(211, 211, 211, 0.25);
+                border-bottom: 1px solid black;
+            }
+        }
+
+        .crossover-hover {
+            animation: crossover 0.5s ease-in-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <a href="menu.html" class="button" id="menu">menu</a>
+    <span style="position: relative; top: 20px; left: 55px; font-family: 'playfair display'; font-size: 17px;">
+        You can see the specific information about me!
+    </span>
+    &nbsp;
+
+    <a href="mailto:lky473736@icloud.com"><input type="button" class="button image" id="email" onclick="alert('mail to lky473736...');"></a>
+    <a href="https://github.com/lky473736"><input type="button" class="button image" id="github"></a>
+    
+    <div id="line"></div>
+
+    <!--============================-->
+
+    <div class="skills_and_links" id="description">
+        <span style="font-family: 'playfair display'; font-size: 30px;">Skills and Links</span>
+        <br>
+        <br>
+
+        <table class="crossover">
+            <tr style="font-family: 'playfair display'">
+                <td class="component" id="focus" style="border-bottom: 1px solid black;" onclick="location.href='skills.html'">
+                    Skills
+                </td>
+                <td class="component" style="border-bottom: 0px solid white;" onclick="location.href='links.html'">
+                    Links
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <p id="top" style="margin-bottom : 60px">제 skill은 <span id='specific'><b>Machine Learning</b></span>과 <span id='specific'><b>Problem Solving</b></span>에 초점이 맞춰져 있습니다.</p>
+
+        <p><span style="margin-bottom : 30px">어릴 때부터 데이터를 분석하고 시각화하는 데이터사이언스 분야에 관심을 가져, 많은 technique을 익혔습니다. 주로 scikit-learn이나 keras을 이용하여 모델링을 진행하며, terminal 혹은 web framework 기반의 인공지능 구동 인터페이스를 구축합니다. LaTeX에 대한 이해도가 높으며, 수학을 좋아합니다.</span></p>
+
+            <!--
+            프로그래밍 언어
+
+            파이썬 숙련도 80%
+            C/C++ 숙련도 60%
+            자바스크립트 숙련도 40%
+            SQL 숙련도 60%
+
+            라이브러리 및 프레임워크, 수학
+
+            일반 헤더, 수학, TeX
+            - C++ STL / Algorithm 55%
+            - Linear Algebra 90%
+            - LaTeX 100% 
+
+            모델링
+                - Scikit-learn 65%
+                - Keras and Tensorflow 60%
+                - Pytorch 50%
+
+            데이터 과학 및 시각화
+                - Matplotlib 55%
+                - Numpy (Scipy) 55%
+                - Pandas 55%
+                - Processing 3 80%
+
+            백엔드 프레임워크
+                - Django 35%
+                - Flask 30%
+            -->
+
+        <br>
+        <br>
+        <br>
+
+        <span id="specific" style="font-size : 23px;"><b>프로그래밍 언어</b></span>
+
+        <div class="skill-bar">
+            <div class="skill python" style="--skill-width: 80%;">Python (80%)</div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill cpp" style="--skill-width: 60%;">C/C++ (60%)</div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill jquery" style="--skill-width: 40%;">Javascript (jQuery) (40%)</div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill sql" style="--skill-width: 60%;">SQL (60%)</div>
+        </div>
+
+        <br>
+        <br>
+
+        <span id="specific" style="font-size : 23px;"><b>일반 헤더, 수학, TeX</b></span>
+
+        <div class="skill-bar">
+            <div class="skill stl" style="--skill-width: 55%;">C++ STL / Algorithm (55%)</div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill linear-algebra" style="--skill-width: 90%;">Linear Algebra (90%)</div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill latex" style="--skill-width: 100%;">LaTeX (100%)</div>
+        </div>
+
+        <br>
+        <br>
+
+
+
+        <span id="specific" style="font-size : 23px;"><b>AI 모델링</b></span>
+
+        <div class="skill-bar">
+            <div class="skill scikit-learn" style="--skill-width: 65%;">Scikit-learn (65%)</div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill tensorflow" style="--skill-width: 60%;">Keras and Tensorflow (60%)</div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill pytorch" style="--skill-width: 50%;">Pytorch (50%)</div>
+        </div>
+
+        <br>
+        <br>
+
+
+
+        <span id="specific" style="font-size : 23px;"><b>데이터 과학 및 시각화</b></span>
+
+        <div class="skill-bar">
+            <div class="skill matplotlib" style="--skill-width: 55%;">Matplotlib (55%)</div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill numpy" style="--skill-width: 55%;">Numpy (Scipy) (55%)</div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill pandas" style="--skill-width: 55%;">Pandas (55%)</div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill processing" style="--skill-width: 80%;">Processing 3 (80%)</div>
+        </div>
+
+
+        <br>
+        <br>
+
+        <span id="specific" style="font-size : 23px;"><b>Python 기반 백엔드 프레임워크</b></span>
+
+        <div class="skill-bar">
+            <div class="skill django" style="--skill-width: 35%;">Django (35%)</div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill flask" style="--skill-width: 30%;">Flask (30%)</div>
+        </div>
+    </div>
+
+    <div class="button" id="upb"><b>↑</b></div>
+
+    <script>
+        document.getElementById('upb').addEventListener('click', function() {
+            window.location.href = '#menu';
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.skill').forEach(function(skill) {
+            var skillWidth = skill.style.getPropertyValue('--skill-width');
+            skill.style.width = skillWidth;
+        });
+    </script>
+
+    <script>
+        var element = "";
+
+        document.addEventListener('mousemove', function(event) {
+            element = event.target;
+        });
+
+        document.querySelectorAll('td.component').forEach(function(td) {
+            td.addEventListener('mouseover', function() {
+                td.classList.add('crossover-hover');
+            });
+
+            td.addEventListener('mouseout', function() {
+                if (element.id !== "focus") {
+                    td.classList.remove('crossover-hover');
+                    td.style.borderBottom = '0px solid white';
+                    td.style.background = 'white';
+                }
+            });
+        });
+    </script>
+
+    <div id="line"></div>
+    <div style="display : flex; justify-content : center; align-items : center; text-align : center;">
+        <p>
+            <b>임규연 @ lky473736</b> <br>
+            <b>Copyright 2024. 임규연, All pictures cannot be copied without permission.</b>
+        </p>
+    </div>
+    <br>
+</body>
+</html>

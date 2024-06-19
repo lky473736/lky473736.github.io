@@ -1,0 +1,30 @@
+<!--
+    임규연 lky473736
+    footer.html
+
+    header 
+    - 메뉴 버튼, 이메일 버튼, 깃헙 버튼 탑재
+    - 아래 section과 구분선을 위한 div
+    - 이메일 버튼을 누를 시 바로 메일을 쓸 수 있도록 mailto 매크로 사용
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style/index.css">
+    <title>header</title>
+</head>
+<body>
+    <a href="../menu.html" class="button" id="menu">menu</a>
+    <span style="position : relative; top : 20px; left : 55px; font-family: 'playfair display'; font-size : 17px;"><mark>Click the menu button.</mark> You can see the specific information about me!</span>
+    &nbsp;
+
+    <a href="mailto:lky473736@icloud.com"><input type="button" class="button image" id="email" onclick="alert('mail to lky473736...');"></a>
+
+    <a href="https://github.com/lky473736"><input type="button" class="button image" id="github"></a>
+    
+    <div id="line"></div>
+</body>
+</html>

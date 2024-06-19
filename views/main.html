@@ -1,0 +1,93 @@
+<!--
+    임규연 lky473736
+    main.html
+
+    main 페이지
+    - 배경으로, 임규연의 사진이 3개가 연이어져 슬라이드쇼로 움직이는 것을 구현함
+    - 텍스트가 차례대로 나오면서 사용자가 메뉴 및 아래 버튼을 통해 about 페이지로 이동할 수 있도록 도움
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lky473736</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/style1.css">
+    <link rel="stylesheet" href="../style/style2.css">
+    <link rel="stylesheet" href="../style/style3.css">
+    <link rel="stylesheet" href="../style/style4.css">
+    
+    <style>
+        body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        }
+      
+      .slideshow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1; 
+      }
+      
+      .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        animation: slideAnimation 2s infinite;
+      }
+      
+      .slide:nth-child(2) {
+        animation-delay: 4s;
+      }
+      
+      .slide:nth-child(3) {
+        animation-delay: 8s;
+      }
+      
+      @keyframes slideAnimation {
+        0% {
+          opacity: 0;
+        }
+        33.33% {
+          opacity: 1;
+        }
+        66.66% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+</head>
+<body id="background">
+    <a href="menu.html" class="button" id="menu">menu</a>
+    <span style="position : relative; top : 20px; left : 55px; font-family: 'playfair display'; font-size : 17px;">You can see the specific information about me!</span>
+
+    <!--====================================-->
+
+    <div class="slideshow">
+        <div class="slide" style="background-image: url('../media/img/portrait/portrait_lky_1.png');"></div>
+        <div class="slide" style="background-image: url('../media/img/portrait/portrait_lky_2.png');"></div>
+        <div class="slide" style="background-image: url('../media/img/portrait/portrait_lky_3.png');"></div>
+    </div>
+    
+
+    <div class="centered" id="text">
+        <span class="text main" id="main1">Run Again_</span>
+        <span class="text main" id="main2">Try Again_</span>
+        <br>
+        <span class="text main" id="main3">Tomorrow-maker,<br>Lim Gyu-Yeon. <a href="./about.html" class="button" id="aboutme"><b>임규연 소개</b></a></span>
+    </div>
+</body>
+        

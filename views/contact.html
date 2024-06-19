@@ -1,0 +1,75 @@
+<!--
+    임규연 lky473736
+    contact.html
+
+    contact 페이지
+    - jsdelivr을 통한 input 라이브러리 사용하여 작업 효율성 높임
+    - form 태그를 이용하여 입력받게 함
+    - 버튼을 누르면 alert가 뜨면서 메일이 전송되었다는 메세지 탑재
+        - 추후 백엔드 프레임워크인 flask나 django로 실제 메일로 전송이 되는 시스템을 구현할 예정
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/style1.css">
+    <link rel="stylesheet" href="../style/style2.css">
+    <link rel="stylesheet" href="../style/style3.css">
+    <link rel="stylesheet" href="../style/style4.css">
+    <title>Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <a href="menu.html" class="button" id="menu">menu</a>
+    <span style="position: relative; top: 20px; left: 55px; font-family: 'playfair display'; font-size: 17px;">
+        You can see the specific information about me!
+    </span>
+    &nbsp;
+
+    <a href="mailto:lky473736@icloud.com"><input type="button" class="button image" id="email" onclick="alert('mail to lky473736...');"></a>
+    <a href="https://github.com/lky473736"><input type="button" class="button image" id="github"></a>
+    
+    <div id="line"></div>
+
+    <!--============================-->
+
+    <div class="contact" id="description">
+        <span style="font-family: 'playfair display'; font-size: 30px;">Contact</span>
+        <br>
+        <br>
+        <p id="top" style="margin-bottom : 60px">연락은<span id='specific'><b> 아래 form이나 이메일로</b></span> 부탁드립니다.</p>
+
+        <form action="get" target="action.py">
+            <div class="mb-3">
+                <label for="email" class="form-label">이메일을 입력하세요.</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="title" class="form-label">제목을 입력하세요.</label>
+                <input type="text" class="form-control" id="title" placeholder="(example) 프로젝트 동업을 원합니다.">
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="textarea" class="form-label">내용을 입력하세요.</label>
+                <textarea class="form-control" id="textarea" rows="3"></textarea>
+            </div>
+        </form>
+        <br>
+        <a class="button" id="menu" onclick="alert('lky473736@icloud.com으로 해당 내용이 발송되었습니다.')" style="position : static">submit</a>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <script>
+        document.getElementById('upb').addEventListener('click', function() {
+            window.location.href = '#menu';
+        });
+    </script>
+</body>
+</html>

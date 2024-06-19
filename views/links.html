@@ -1,0 +1,178 @@
+<!--
+    임규연 lky473736
+    links.html
+
+    links 페이지
+    - div로 버튼을 만들어, 버튼에 마우스를 가져댔을 시 생동감을 위해 애니메이션 탑재
+    - 자바스크립트로 상시 대기하는 버튼 시스템을 개발, 사용자의 마우스를 실시간으로 파악하여 버튼에 클릭 시 해당되는 링크로 이동되도록 자바스크립트 구현
+    - skills 페이지와 유동적인 이동을 위하여 크로스오버 테이블로 구현
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/style1.css">
+    <link rel="stylesheet" href="../style/style2.css">
+    <link rel="stylesheet" href="../style/style3.css">
+    <link rel="stylesheet" href="../style/style4.css">
+    <title>Links</title>
+    <style>
+        @keyframes crossover {
+            from {
+                background-color: white;
+            }
+            to {
+                background-color : rgba(211, 211, 211, 0.25);
+                border-bottom: 1px solid black;
+            }
+        }
+
+        .crossover-hover {
+            animation: crossover 0.5s ease-in-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <a href="menu.html" class="button" id="menu">menu</a>
+    <span style="position: relative; top: 20px; left: 55px; font-family: 'playfair display'; font-size: 17px;">
+        You can see the specific information about me!
+    </span>
+    &nbsp;
+
+    <a href="mailto:lky473736@icloud.com"><input type="button" class="button image" id="email" onclick="alert('mail to lky473736...');"></a>
+    <a href="https://github.com/lky473736"><input type="button" class="button image" id="github"></a>
+    
+    <div id="line"></div>
+
+    <!--============================-->
+
+    <div class="skills_and_links" id="description">
+        <span style="font-family: 'playfair display'; font-size: 30px;">Skills and Links</span>
+        <br>
+        <br>
+
+        <table class="crossover">
+            <tr style="font-family: 'playfair display'">
+                <td class="component" style="border-bottom: 0px solid white;" onclick="location.href='skills.html'">
+                    Skills
+                </td>
+                <td class="component" id="focus" style="border-bottom: 1px solid black;" onclick="location.href='links.html'">
+                    Links
+                </td>
+            </tr>
+        </table>
+        <br>
+        <p id="top" style="margin-bottom : 60px">여기서 <span id='specific'><b>제 계정 및 연락처를</b></span> 확인할 수 있습니다.</p>
+
+        <p><span style="margin-bottom : 30px">저는 주로 Develop Talk가 오가는 소셜 네트워크를 자주 사용하며, 그 중 예시는 Github입니다. 이메일을 정말 많이 사용하니, 연락을 원하신다면 이메일로 소통을 부탁드리겠습니다. <a style="color : #0000007f;" href="contact.html">Menu > Contact <img style="width : 25px; " src="../media/img/icon/icon_link.png"></a>을 통하여 저에게 연락을 주셔도 좋습니다.</span></p>
+
+        <br>
+        <br>
+        <br>
+
+        <!---=======-->
+
+        <!--
+            - github
+            - mail
+            - 백준
+            - solved.ac
+            - 링크드인
+            - 인스타그램
+        -->
+
+        * 아래 버튼을 클릭하면 해당 링크로 이동됩니다.
+
+        <div role="button" tabindex="0" class="linkbox" id="emailLink">
+            <b>📨 &nbsp; 이메일</b><small>lky473736@icloud.com</small>
+        </div>
+
+        <div role="button" tabindex="0" class="linkbox" id="githubLink">
+            <b>📂 &nbsp; Github</b><small>lky473736</small>
+        </div>
+
+        <div role="button" tabindex="0" class="linkbox" id="baekjoonLink">
+            <b>📝 &nbsp; 백준온라인저지</b> <small>@lky473736</small>
+        </div>
+
+        <div role="button" tabindex="0" class="linkbox" id="solvedLink">
+            <b>✅ &nbsp; solved.ac</b><small>@lky473736</small>
+        </div>
+
+        <div role="button" tabindex="0" class="linkbox" id="linkedinLink">
+            <b>📍 &nbsp; Linkedin</b><small>lky473736</small>
+        </div>
+
+        <div role="button" tabindex="0" class="linkbox" id="instagramLink">
+            <b><span>🏞️ &nbsp; instagram</span></b><small>dlarbdus0</small>
+        </div>
+    </div>
+
+    <div class="button" id="upb"><b>↑</b></div>
+
+    <script>
+        document.getElementById('upb').addEventListener('click', function() {
+            window.location.href = '#menu';
+        });
+    </script>
+
+    <script>
+        document.getElementById('emailLink').addEventListener('click', function() {
+            window.location.href = 'mailto:lky473736@icloud.com';
+        });
+
+        document.getElementById('githubLink').addEventListener('click', function() {
+            window.location.href = 'https://github.com/lky473736';
+        });
+
+        document.getElementById('baekjoonLink').addEventListener('click', function() {
+            window.location.href = 'https://www.acmicpc.net/user/lky473736';
+        });
+
+        document.getElementById('solvedLink').addEventListener('click', function() {
+            window.location.href = 'https://solved.ac/profile/lky473736';
+        });
+
+        document.getElementById('linkedinLink').addEventListener('click', function() {
+            window.location.href = 'https://www.linkedin.com/in/%EC%9E%84%EA%B7%9C%EC%97%B0-undefined-a24016278/';
+        });
+
+        document.getElementById('instagramLink').addEventListener('click', function() {
+            window.location.href = 'https://www.instagram.com/dlarbdus0';
+        });
+    </script>
+
+    <script>
+        var element = "";
+
+        document.addEventListener('mousemove', function(event) {
+            element = event.target;
+        });
+
+        document.querySelectorAll('td.component').forEach(function(td) {
+            td.addEventListener('mouseover', function() {
+                td.classList.add('crossover-hover');
+            });
+
+            td.addEventListener('mouseout', function() {
+                if (element.id !== "focus") {
+                    td.classList.remove('crossover-hover');
+                    td.style.borderBottom = '0px solid white';
+                    td.style.background = 'white';
+                }
+            });
+        });
+    </script>
+
+    <div id="line"></div>
+    <div style="display : flex; justify-content : center; align-items : center; text-align : center;">
+        <p>
+            <b>임규연 @ lky473736</b> <br>
+            <b>Copyright 2024. 임규연, All pictures cannot be copied without permission.</b>
+        </p>
+    </div>
+    <br>
+</body>
