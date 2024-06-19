@@ -6,26 +6,26 @@
 
 @font-face {
     font-family: 'playfair display';
-    src: url('../media/font/font_playfair.ttf') format('ttf'),
-	url('../media/font/font_playfair.otf') format('otf');
+    src: url('../media/font/font_playfair.ttf') format('truetype'),
+	url('../media/font/font_playfair.otf') format('opentype');
 }
 
 @font-face {
     font-family : 'pretendard';
-    src : url('../media/font/font_pretendard.ttf') format('ttf'),
-	url('../media/font/font_pretendard.otf') format('otf');
+    src : url('../media/font/font_pretendard.ttf') format('truetype'),
+	url('../media/font/font_pretendard.otf') format('opentype');
 }
 
 @font-face {
     font-family : 'pretendard_bold';
-    src : url('../media/font/font_pretendard_bold.ttf') format('ttf'),
-	url('../media/font/font_pretendard_bold.otf') format('otf');
+    src : url('../media/font/font_pretendard_bold.ttf') format('truetype'),
+	url('../media/font/font_pretendard_bold.otf') format('opentype');
 }
 
 @font-face {
     font-family : 'pretendard_thin';
-    src : url('../media/font/font_pretendard_thin.ttf') format('ttf'),
-	url('../media/font/font_pretendard_thin.otf') format('otf');
+    src : url('../media/font/font_pretendard_thin.ttf') format('truetype'),
+	url('../media/font/font_pretendard_thin.otf') format('opentype');
 }
 
 @keyframes opening_text{
