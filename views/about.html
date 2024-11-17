@@ -39,6 +39,32 @@
         #description {
             font-family : 'pretendard';
         } */
+        table#gpa {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            table-layout: fixed;
+        }
+        
+        #gpa th, #gpa td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #dddddd;
+            white-space: nowrap;
+            text-align: center;
+        }
+        
+        #gpa th {
+            background-color: #f2f2f2;
+        }
+        
+        #gpa td {
+            font-size : 17px;
+        }
+        
+        #gpa tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
     </style>
 </head>
 <body>
@@ -92,9 +118,41 @@
         <a style="color : #0000007f;" href="https://github.com/lky473736">GitHub : lky473736 <img style="width : 25px; " src="../media/img/icon/icon_link.png"></a> &nbsp; &nbsp;
 
         <br>
+
+        <table id="gpa">
+            <thead>
+                <tr>
+                    <th rowspan="2">GPA</th>
+                    <th>1-1</th>
+                    <th>1-2</th>
+                    <th>2-1</th>
+                    <th>2-2</th>
+                    <th>3-1</th>
+                    <th>3-2</th>
+                    <th>4-1</th>
+                    <th>4-2</th>
+                    <th>Avg.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>.</td>
+                    <td>4.42/4.5</td>
+                    <td>4.5/4.5</td>
+                    <td>4.5/4.5</td>
+                    <td>?/4.5</td>
+                    <td>?/4.5</td>
+                    <td>?/4.5</td>
+                    <td>?/4.5</td>
+                    <td>조기졸업</td>
+                    <td>4.48</td>
+                </tr>
+            </tbody>
+        </table>
+
         <br>
         <br>
-        <br>
+
 
         <img src="../media/img/fig/fig_ntree.png" alt="fig ntree">
         <br>
