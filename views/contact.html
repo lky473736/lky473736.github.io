@@ -43,28 +43,45 @@
         <br>
         <p id="top" style="margin-bottom : 60px">연락은<span id='specific'><b> 아래 form이나 이메일로</b></span> 부탁드립니다.</p>
 
-        <form action="get" target="action.py">
+        <form id="contactForm" onsubmit="sendEmail(event)">
             <div class="mb-3">
                 <label for="email" class="form-label">이메일을 입력하세요.</label>
-                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
             </div>
             <br>
             <div class="mb-3">
                 <label for="title" class="form-label">제목을 입력하세요.</label>
-                <input type="text" class="form-control" id="title" placeholder="(example) 프로젝트 동업을 원합니다.">
+                <input type="text" class="form-control" id="title" placeholder="(example) 프로젝트 동업을 원합니다." required>
             </div>
             <br>
             <div class="mb-3">
                 <label for="textarea" class="form-label">내용을 입력하세요.</label>
-                <textarea class="form-control" id="textarea" rows="3"></textarea>
+                <textarea class="form-control" id="textarea" rows="3" required></textarea>
             </div>
+            <br>
+            <button type="submit" class="button" id="menu" style="position: static">submit</button>
         </form>
         <br>
-        <a class="button" id="menu" onclick="alert('lky473736@icloud.com으로 해당 내용이 발송되었습니다.')" style="position : static">submit</a>
     </div>
     <br>
     <br>
     <br>
+
+    <script>
+        function sendEmail(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('textarea').value;
+            
+            const mailtoLink = `mailto:lky473736@icloud.com?subject=${encodeURIComponent(title)}&body=${encodeURIComponent('보낸 이의 메일 주소 : ' + email + '\n\n' + content)}`;
+            
+            window.location.href = mailtoLink;
+            
+            alert('이메일 클라이언트가 열립니다.');
+        }
+        </script>
 
     <script>
         document.getElementById('upb').addEventListener('click', function() {
