@@ -593,11 +593,20 @@ section h2 {
 /* ─── Footer ─── */
 .footer {
   padding: 1.5rem 0;
-  text-align: center;
   border-top: 1px solid var(--border);
 }
 
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 .footer p { font-size: 0.82rem; color: var(--subtle); }
+
+.footer-counter img { display: block; }
 
 /* ─── Responsive ─── */
 @media (max-width: 860px) {
