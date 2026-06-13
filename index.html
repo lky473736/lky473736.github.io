@@ -1,397 +1,463 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gyuyeon Lim</title>
-    <meta name="description" content="Gyuyeon Lim — Computer Engineering, Gachon University. Researcher in deep learning on time series, human activity recognition, and AI for science.">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gyuyeon Lim</title>
+  <meta name="description" content="Gyuyeon Lim — Computer Engineering, Gachon University. Researcher in deep learning on time series, human activity recognition, AI for science.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <header class="site-header">
-      <nav class="nav" aria-label="Main navigation">
-        <a class="brand" href="#home">
-          <div class="brand-initials">GL</div>
-          <div class="brand-text">
-            <span>Gyuyeon Lim</span>
-            <small>Computer Engineering · Gachon University</small>
-          </div>
-        </a>
-        <div class="nav-links">
-          <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
-          <a href="#experience">Experience</a>
-          <a href="#education">Education</a>
-          <a href="#activities">Activities</a>
-          <a href="#contact">Contact</a>
+<nav class="nav">
+  <div class="wrap">
+    <a class="nav-name" href="#home">Gyuyeon Lim</a>
+    <div class="nav-links" id="nav-links">
+      <a href="#education">Education</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#activities">Activities</a>
+      <a href="#projects">Projects</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">···</button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Gyuyeon Lim</h1>
+        <p class="hero-dept">
+          <span>B.S. Candidate, Computer Engineering</span>
+          <span>Gachon University · Seongnam-Si, South Korea</span>
+        </p>
+        <p class="hero-bio">I am Gyuyeon Lim, a research intern currently studying time-series AI and NLP. In addition to my research, I have been working as a lead mathematics instructor for Korean CSAT (College Scholastic Ability Test) preparation since 2023.</p>
+        <p class="hero-git">Get in touch</p>
+        <div class="hero-links">
+          <a class="hlink" href="mailto:lky473736@gmail.com">
+            <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+            lky473736@gmail.com
+          </a>
+          <a class="hlink" href="https://github.com/lky473736" target="_blank" rel="noopener">
+            <svg class="chip-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            GitHub
+          </a>
+          <a class="hlink" href="https://www.linkedin.com/in/gyuyeon-lim-a24016278/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="hlink" href="https://scholar.google.com/citations?user=S6SqhsoAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="hlink" href="https://icpc.global/ICPCID/0PRGZ4AVMTHN" target="_blank" rel="noopener">ICPC</a>
+          <a class="hlink" href="https://www.acmicpc.net/user/lky473736" target="_blank" rel="noopener">Baekjoon Online Judge</a>
+          <a class="hlink" href="https://astonishing-antlion-13b.notion.site/Database-about-researching-10fe61796c4280f3be35c003e83a291c" target="_blank" rel="noopener">Database for Insight</a>
         </div>
-      </nav>
-    </header>
-
-    <main>
-
-      <!-- ── Hero ── -->
-      <section id="home" class="hero section">
-        <div class="container">
-          <div class="hero-layout">
-            <img
-              class="hero-photo"
-              src="profile.jpg"
-              alt="Gyuyeon Lim portrait"
-            >
-            <div class="hero-copy">
-              <p class="eyebrow">Undergraduate Researcher</p>
-              <h1 class="hero-name">Gyuyeon Lim</h1>
-              <div class="hero-affil">
-                <span>Department of Computer Engineering, Gachon University</span>
-                <span>Seongnam-Si, South Korea</span>
-              </div>
-              <div class="hero-contact">
-                <a href="tel:+821099744737">(+82) 010-9974-4737</a>
-                <a href="mailto:lky473736@gmail.com">lky473736@gmail.com</a>
-              </div>
-              <div class="hero-links">
-                <a class="link-chip" href="https://github.com/lky473736" target="_blank" rel="noopener">GitHub</a>
-                <a class="link-chip" href="https://www.linkedin.com/in/gyuyeon-lim-a24016278/" target="_blank" rel="noopener">LinkedIn</a>
-                <a class="link-chip" href="https://scholar.google.com/citations?user=S6SqhsoAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-                <a class="link-chip" href="https://icpc.global/ICPCID/0PRGZ4AVMTHN" target="_blank" rel="noopener">ICPC</a>
-                <a class="link-chip" href="https://astonishing-antlion-13b.notion.site/Database-about-researching-10fe61796c4280f3be35c003e83a291c" target="_blank" rel="noopener">Paper Notes</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── Research Interests ── -->
-      <section id="research" class="section band">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Research</p>
-            <h2>Research Interests</h2>
-          </div>
-          <div class="interest-groups">
-            <div class="interest-card">
-              <h3>Machine Learning &amp; Deep Learning</h3>
-              <ul class="interest-tags">
-                <li>Representation Learning</li>
-                <li>Deep Learning on Time Series</li>
-                <li>Data Embedding</li>
-                <li>Spatio-temporal Time Series</li>
-              </ul>
-            </div>
-            <div class="interest-card">
-              <h3>AI for Science</h3>
-              <ul class="interest-tags">
-                <li>Human Activity Recognition</li>
-                <li>Biosignal Processing</li>
-                <li>Physics-based Loss Construction</li>
-                <li>IMU &amp; Wearable Sensors</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── Publications ── -->
-      <section id="publications" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Publications</p>
-            <h2>Publications</h2>
-          </div>
-          <div class="pub-list">
-
-            <div class="pub-item">
-              <div class="pub-meta">
-                <span class="pub-venue">IEEE TCE</span>
-                <span class="pub-date">Accepted Apr 2026</span>
-                <span class="pub-if">IF 10.9 · CiteScore 5.5</span>
-              </div>
-              <p class="pub-title">Rotation-Robust Self-Supervised Learning for IMU-Based HAR with Multi-Scale Convolutional Backbones</p>
-              <p class="pub-authors"><strong>Gyuyeon Lim</strong> and Myung-Kyu Yi. <em>IEEE Transactions on Consumer Electronics</em>, 2026.</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1109/TCE.2026.3682243" target="_blank" rel="noopener">DOI</a>
-                <a href="https://github.com/lky473736/InceptionMK" target="_blank" rel="noopener">Code</a>
-              </div>
-            </div>
-
-            <div class="pub-item">
-              <div class="pub-meta">
-                <span class="pub-venue">IEEE Sensors J.</span>
-                <span class="pub-date">Accepted Mar 2026</span>
-                <span class="pub-if">IF 4.5 · CiteScore 8.2</span>
-              </div>
-              <p class="pub-title">Dynamics-Aware Action State Flow for Wearable Human Activity Recognition</p>
-              <p class="pub-authors">JunYoung Park, <strong>Gyuyeon Lim</strong>, and Myung-Kyu Yi. <em>IEEE Sensors Journal</em>, 2026. <em style="color: var(--gold); font-weight:700;">(Second Author)</em></p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1109/JSEN.2026.3675557" target="_blank" rel="noopener">DOI</a>
-              </div>
-            </div>
-
-            <div class="pub-item">
-              <div class="pub-meta">
-                <span class="pub-venue">IEEE Sensors J.</span>
-                <span class="pub-date">Accepted Mar 2026</span>
-                <span class="pub-if">IF 4.5 · CiteScore 8.2</span>
-              </div>
-              <p class="pub-title">Robust Sensor-Based Activity Recognition via Physics-Aware Disentangled Representation Learning and Feature-wise Linear Modulation Conditioning</p>
-              <p class="pub-authors"><strong>Gyuyeon Lim</strong> and Myung-Kyu Yi. <em>IEEE Sensors Journal</em>, 2026.</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1109/JSEN.2026.3673698" target="_blank" rel="noopener">DOI</a>
-                <a href="https://github.com/lky473736/PADR" target="_blank" rel="noopener">Code</a>
-              </div>
-            </div>
-
-            <div class="pub-item">
-              <div class="pub-meta">
-                <span class="pub-venue">IEEE Sensors J.</span>
-                <span class="pub-date">Accepted Feb 2026</span>
-                <span class="pub-if">IF 4.5 · CiteScore 8.2</span>
-              </div>
-              <p class="pub-title">CAP-SSM: Context-Aware Prototypes and Selective State-Space Modeling for Efficient Wearable Human Activity Recognition</p>
-              <p class="pub-authors"><strong>Gyuyeon Lim</strong> and Myung-Kyu Yi. <em>IEEE Sensors Journal</em>, 2026.</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1109/JSEN.2026.3663003" target="_blank" rel="noopener">DOI</a>
-                <a href="https://github.com/lky473736/CAP-SSM" target="_blank" rel="noopener">Code</a>
-              </div>
-            </div>
-
-            <div class="pub-item">
-              <div class="pub-meta">
-                <span class="pub-venue">IEEE IoTJ</span>
-                <span class="pub-date">Accepted Jan 2026</span>
-                <span class="pub-if">IF 8.9 · CiteScore 16.3</span>
-              </div>
-              <p class="pub-title">Prototype-Guided Physics-Modulated Perceiver for Human Activity Recognition</p>
-              <p class="pub-authors"><strong>Gyuyeon Lim</strong> and Myung-Kyu Yi. <em>IEEE Internet of Things Journal</em>, 2026.</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1109/JIOT.2026.3658863" target="_blank" rel="noopener">DOI</a>
-                <a href="https://github.com/lky473736/P2-Perceiver" target="_blank" rel="noopener">Code</a>
-              </div>
-            </div>
-
-            <div class="pub-item">
-              <div class="pub-meta">
-                <span class="pub-venue">IEEE Sensors J.</span>
-                <span class="pub-date">Accepted Sep 2025</span>
-                <span class="pub-if">IF 4.5 · CiteScore 8.2</span>
-              </div>
-              <p class="pub-title">Contrastive Learning for Zero-Shot Human Activity Recognition Using Labeled Simple Actions on Wearable Devices</p>
-              <p class="pub-authors"><strong>Gyuyeon Lim</strong> and Myung-Kyu Yi. <em>IEEE Sensors Journal</em>, 2025.</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1109/JSEN.2025.3613260" target="_blank" rel="noopener">DOI</a>
-                <a href="https://github.com/lky473736/ZSL-HAR" target="_blank" rel="noopener">Code</a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ── Experience ── -->
-      <section id="experience" class="section band">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Experience</p>
-            <h2>Employment &amp; Research</h2>
-          </div>
-          <div class="timeline">
-
-            <div class="timeline-item">
-              <div class="timeline-period">Dec 2025 – Present</div>
-              <div class="timeline-title">Research Intern</div>
-              <div class="timeline-org">SNU Graduate School of Data Science (SKI-ML Lab) · Seoul</div>
-              <p class="timeline-desc">
-                Spatio-temporal multivariate modeling for large-scale time-series with graph dependencies (targeting AAAI 2027).
-                Co-authored NeuroX-EEG, submitted to NeurIPS 2026 with the Connectome Lab (Prof. Jiook Cha).
-              </p>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-period">Mar 2025 – Jun 2025</div>
-              <div class="timeline-title">Field Task R&amp;D Undergraduate Intern</div>
-              <div class="timeline-org">HumanDeep · Biosignal Team</div>
-              <p class="timeline-desc">
-                R&amp;D on biosignal processing and wearable sensor pipelines.
-              </p>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-period">Feb 2025 – Jun 2025</div>
-              <div class="timeline-title">Undergraduate Research Intern</div>
-              <div class="timeline-org">Seoul National University Hospital · BMI Lab (Prof. Kwangsoo Kim) · Yeongeon, Seoul</div>
-              <p class="timeline-desc">
-                Holter Foundation Model and MLOps development. Affiliated with the biomedical informatics team.
-              </p>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-period">Mar 2023 – Present</div>
-              <div class="timeline-title">Lead Math Instructor</div>
-              <div class="timeline-org">Metrix Mathematics Institute (HB Math&amp;Eng) · Seongnam-Si</div>
-              <p class="timeline-desc">
-                Primary instructor for elementary through high school students (grades 2–3).
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ── Education ── -->
-      <section id="education" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Education</p>
-            <h2>Education</h2>
-          </div>
-          <div class="timeline">
-
-            <div class="timeline-item">
-              <div class="timeline-period">Mar 2023 – Feb 2027</div>
-              <div class="timeline-title">B.S. in Computer Engineering</div>
-              <div class="timeline-org">Gachon University · Seongnam-Si</div>
-              <p class="timeline-desc">
-                GPA 4.41 / 4.5 &nbsp;·&nbsp; 121 credits completed.<br>
-                Research guidance from Prof. Myung-Kyu Yi, Institute of Biomedical Engineering, Hanyang University (since Jun 2024).
-              </p>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-period">Mar 2020 – Jan 2023</div>
-              <div class="timeline-title">Mathematics &amp; Science Intensive Program</div>
-              <div class="timeline-org">Hyosung High School · Seongnam-Si</div>
-              <p class="timeline-desc">Graduated from the STEM-intensive track.</p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ── Activities ── -->
-      <section id="activities" class="section band">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Activities</p>
-            <h2>Scholarships &amp; Awards</h2>
-          </div>
-          <div class="activities-grid">
-
-            <div class="activity-group">
-              <h3>Scholarships</h3>
-              <div class="activity-list">
-                <div class="activity-item">
-                  <div class="activity-date">Dec 2025</div>
-                  <div class="activity-title">SCI Publication Scholarship</div>
-                  <p class="activity-detail">Gachon University — The Highest Honor</p>
-                </div>
-                <div class="activity-item">
-                  <div class="activity-date">Every semester</div>
-                  <div class="activity-title">Academic Excellence Scholarship</div>
-                  <p class="activity-detail">Gachon University</p>
-                </div>
-                <div class="activity-item">
-                  <div class="activity-date">3rd year onward</div>
-                  <div class="activity-title">National Science &amp; Technology Scholarship</div>
-                  <p class="activity-detail">Ministry of Science and ICT (MSIT)</p>
-                </div>
-                <div class="activity-item">
-                  <div class="activity-date">Jan 2024</div>
-                  <div class="activity-title">Science and Engineering Excellence Scholarship</div>
-                  <p class="activity-detail">Anyang-Gwacheon Chamber of Commerce and Industry</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="activity-group">
-              <h3>Awards</h3>
-              <div class="activity-list">
-                <div class="activity-item">
-                  <div class="activity-date">May 2025</div>
-                  <div class="activity-title">Severance Challenge Award</div>
-                  <p class="activity-detail">2025 Yonsei Yongin Severance Hospital Healthcare Hackathon</p>
-                </div>
-                <div class="activity-item">
-                  <div class="activity-date">Jun 2025</div>
-                  <div class="activity-title">3rd Place — AI/SW Day Oral Presentation</div>
-                  <p class="activity-detail">Gachon University · YOLOv5-based Children Protection Area sign detection — <a href="https://github.com/lky473736/luxonis" target="_blank" rel="noopener">GitHub</a></p>
-                </div>
-                <div class="activity-item">
-                  <div class="activity-date">Oct 2024</div>
-                  <div class="activity-title">ICPC Seoul Regional Finalist</div>
-                  <p class="activity-detail">Team GPT — 168th of 376 teams, KINTEX Goyang-Si — <a href="https://icpckorea.org/archives/3155" target="_blank" rel="noopener">Official</a></p>
-                </div>
-                <div class="activity-item">
-                  <div class="activity-date">Jan 2024</div>
-                  <div class="activity-title">Grand Prize — Future Design Project</div>
-                  <p class="activity-detail">Gachon University (1st Place)</p>
-                </div>
-                <div class="activity-item">
-                  <div class="activity-date">Jun 2023</div>
-                  <div class="activity-title">Grand Prize — Software Competition</div>
-                  <p class="activity-detail">Gachon University (1st Place) · Smart Home with Physical Computing</p>
-                </div>
-                <div class="activity-item">
-                  <div class="activity-date">Nov 2018</div>
-                  <div class="activity-title">Minister of Oceans and Fisheries Award</div>
-                  <p class="activity-detail">2018 National Student Science and Invention Competition</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ── Contact ── -->
-      <section id="contact" class="section">
-        <div class="container contact-layout">
-          <div>
-            <p class="eyebrow">Contact</p>
-            <h2>Get in touch</h2>
-            <p style="color: var(--muted); max-width: 440px;">
-              Feel free to reach out about research collaborations, paper discussions, or anything else.
-            </p>
-          </div>
-          <div class="contact-card">
-            <dl>
-              <div>
-                <dt>Email</dt>
-                <dd><a href="mailto:lky473736@gmail.com">lky473736@gmail.com</a></dd>
-              </div>
-              <div>
-                <dt>Phone</dt>
-                <dd><a href="tel:+821099744737">(+82) 010-9974-4737</a></dd>
-              </div>
-              <div>
-                <dt>Affiliation</dt>
-                <dd>Computer Engineering, Gachon University</dd>
-              </div>
-              <div>
-                <dt>GitHub</dt>
-                <dd><a href="https://github.com/lky473736" target="_blank" rel="noopener">github.com/lky473736</a></dd>
-              </div>
-              <div>
-                <dt>Google Scholar</dt>
-                <dd><a href="https://scholar.google.com/citations?user=S6SqhsoAAAAJ" target="_blank" rel="noopener">Scholar profile</a></dd>
-              </div>
-              <div>
-                <dt>LinkedIn</dt>
-                <dd><a href="https://www.linkedin.com/in/gyuyeon-lim-a24016278/" target="_blank" rel="noopener">gyuyeon-lim</a></dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© 2026 Gyuyeon Lim</p>
       </div>
-    </footer>
+      <img class="hero-photo" src="profile.jpg" alt="Gyuyeon Lim">
+    </div>
+  </div>
+</section>
 
-  </body>
+<!-- Education -->
+<section id="education">
+  <div class="wrap">
+    <p class="sec-label">Education</p>
+    <h2>Education</h2>
+    <div class="edu-list">
+
+      <div class="edu">
+        <div class="edu-period">2023.03. –<br>2027.02.</div>
+        <div>
+          <div class="edu-name">B.S. in Computer Engineering</div>
+          <div class="edu-sub">Gachon University · Seongnam-Si</div>
+          <div class="edu-detail">
+            <ul>
+              <li>GPA: 4.42 / 4.5 &nbsp;·&nbsp; 121 of 120 credits</li>
+              <li>Research guidance from Prof. Myung-Kyu Yi, Institute of Biomedical Engineering, Hanyang University (since 2024.06.)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu">
+        <div class="edu-period">2020.03. –<br>2023.01.</div>
+        <div>
+          <div class="edu-name">Mathematics &amp; Science Intensive Program</div>
+          <div class="edu-sub">Hyosung High School · Seongnam-Si</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Research Interests -->
+<section id="research">
+  <div class="wrap">
+    <p class="sec-label">Research</p>
+    <h2>Research Interests</h2>
+    <div class="ri-grid">
+      <div class="ri-card">
+        <h3>Machine Learning &amp; Deep Learning</h3>
+        <ul class="ri-tags">
+          <li>Representations</li>
+          <li>Deep Learning on Time Series</li>
+          <li>Data Embedding</li>
+          <li>Spatio-temporal Time Series</li>
+        </ul>
+      </div>
+      <div class="ri-card">
+        <h3>AI for Science</h3>
+        <ul class="ri-tags">
+          <li>Human Activity Recognition</li>
+          <li>Biosignal (IMU, Wearable Sensors)</li>
+          <li>Physics Prior &amp; Physics-based Loss</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Publications -->
+<section id="publications">
+  <div class="wrap">
+    <p class="sec-label">Publications</p>
+    <h2>Publications</h2>
+    <div class="pub-list">
+
+      <div class="pub">
+        <div class="pub-year">2026.04.</div>
+        <div>
+          <div><span class="pub-venue-tag">IEEE Trans. Consumer Electron.</span><span class="pub-if">IF 10.9</span></div>
+          <p class="pub-title">Rotation-Robust Self-Supervised Learning for IMU-Based HAR with Multi-Scale Convolutional Backbones</p>
+          <p class="pub-authors"><strong>Gyuyeon Lim</strong> and Myung-Kyu Yi, 2026.</p>
+          <div class="pub-row-links">
+            <a class="pl" href="https://doi.org/10.1109/TCE.2026.3682243" target="_blank" rel="noopener">DOI</a>
+            <a class="pl" href="https://github.com/lky473736/InceptionMK" target="_blank" rel="noopener">Code — InceptionMK</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-year">2026.03.</div>
+        <div>
+          <div><span class="pub-venue-tag">IEEE Sensors J.</span><span class="pub-if">IF 4.5</span></div>
+          <p class="pub-title">Dynamics-Aware Action State Flow for Wearable Human Activity Recognition</p>
+          <p class="pub-authors">JunYoung Park, <strong>Gyuyeon Lim</strong>, and Myung-Kyu Yi, 2026. <span class="pub-note">(2nd Author)</span></p>
+          <div class="pub-row-links">
+            <a class="pl" href="https://doi.org/10.1109/JSEN.2026.3675557" target="_blank" rel="noopener">DOI</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-year">2026.03.</div>
+        <div>
+          <div><span class="pub-venue-tag">IEEE Sensors J.</span><span class="pub-if">IF 4.5</span></div>
+          <p class="pub-title">Robust Sensor-Based Activity Recognition via Physics-Aware Disentangled Representation Learning and Feature-wise Linear Modulation Conditioning</p>
+          <p class="pub-authors"><strong>Gyuyeon Lim</strong> and Myung-Kyu Yi, 2026.</p>
+          <div class="pub-row-links">
+            <a class="pl" href="https://doi.org/10.1109/JSEN.2026.3673698" target="_blank" rel="noopener">DOI</a>
+            <a class="pl" href="https://github.com/lky473736/PADR" target="_blank" rel="noopener">Code — PADR</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-year">2026.02.</div>
+        <div>
+          <div><span class="pub-venue-tag">IEEE Sensors J.</span><span class="pub-if">IF 4.5</span></div>
+          <p class="pub-title">CAP-SSM: Context-Aware Prototypes and Selective State-Space Modeling for Efficient Wearable Human Activity Recognition</p>
+          <p class="pub-authors"><strong>Gyuyeon Lim</strong> and Myung-Kyu Yi, 2026.</p>
+          <div class="pub-row-links">
+            <a class="pl" href="https://doi.org/10.1109/JSEN.2026.3663003" target="_blank" rel="noopener">DOI</a>
+            <a class="pl" href="https://github.com/lky473736/CAP-SSM" target="_blank" rel="noopener">Code — CAP-SSM</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-year">2026.01.</div>
+        <div>
+          <div><span class="pub-venue-tag">IEEE Internet of Things J.</span><span class="pub-if">IF 8.9</span></div>
+          <p class="pub-title">Prototype-Guided Physics-Modulated Perceiver for Human Activity Recognition</p>
+          <p class="pub-authors"><strong>Gyuyeon Lim</strong> and Myung-Kyu Yi, 2026.</p>
+          <div class="pub-row-links">
+            <a class="pl" href="https://doi.org/10.1109/JIOT.2026.3658863" target="_blank" rel="noopener">DOI</a>
+            <a class="pl" href="https://github.com/lky473736/P2-Perceiver" target="_blank" rel="noopener">Code — P2-Perceiver</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-year">2025.09.</div>
+        <div>
+          <div><span class="pub-venue-tag">IEEE Sensors J.</span><span class="pub-if">IF 4.5</span></div>
+          <p class="pub-title">Contrastive Learning for Zero-Shot Human Activity Recognition Using Labeled Simple Actions on Wearable Devices</p>
+          <p class="pub-authors"><strong>Gyuyeon Lim</strong> and Myung-Kyu Yi, 2025.</p>
+          <div class="pub-row-links">
+            <a class="pl" href="https://doi.org/10.1109/JSEN.2025.3613260" target="_blank" rel="noopener">DOI</a>
+            <a class="pl" href="https://github.com/lky473736/ZSL-HAR" target="_blank" rel="noopener">Code — ZSL-HAR</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+  <div class="wrap">
+    <p class="sec-label">Experience</p>
+    <h2>Employment History</h2>
+    <div class="exp-list">
+
+      <div class="exp-group-title">Research</div>
+
+      <div class="exp">
+        <div class="exp-period">2025.12. –<br>Present</div>
+        <div>
+          <div class="exp-title">Research Intern</div>
+          <div class="exp-org">Seoul National University Graduate School of Data Science · <a href="https://www.skiml.snu.ac.kr/home" target="_blank" rel="noopener">SKI-ML</a> (Prof. Jay-Yoon Lee) · Seoul</div>
+          <div class="exp-desc">
+            <ul>
+              <li>Structure and Knowledge Injection into Machine Learning (SKI-ML lab)</li>
+              <li>Spatio-temporal multivariate modeling for large-scale time-series with graph dependencies (targeting AAAI 2027)</li>
+              <li>Co-authored NeuroX-EEG, submitted to NeurIPS 2026 in collaboration with the Connectome Lab (Prof. Jiook Cha)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp">
+        <div class="exp-period">2025.02. –<br>2025.06.</div>
+        <div>
+          <div class="exp-title">Undergraduate Research Intern</div>
+          <div class="exp-org">Seoul National University Hospital · <a href="http://snuh-bmi.com" target="_blank" rel="noopener">BMI Lab</a> (Prof. Kwangsoo Kim) · Yeongeon, Seoul</div>
+          <div class="exp-desc">
+            <ul>
+              <li>Biomedical Informatics Lab (SNUH BMI LAB)</li>
+              <li>Holter Foundation Model and MLOps Development Team</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp">
+        <div class="exp-period">2025.03. –<br>2025.06.</div>
+        <div>
+          <div class="exp-title">Field Task R&amp;D Undergraduate Intern</div>
+          <div class="exp-org"><a href="https://humandeep.net" target="_blank" rel="noopener">HumanDeep</a> · Biosignal Team</div>
+          <div class="exp-desc">R&amp;D on wearable biosignal processing and real-world field deployment.</div>
+        </div>
+      </div>
+
+      <div class="exp-group-title">Teaching</div>
+
+      <div class="exp">
+        <div class="exp-period">2026.01. –<br>Present</div>
+        <div>
+          <div class="exp-title">High School Math Instructor</div>
+          <div class="exp-org">Myungmun Seoil Academy Premium · Seongnam-Si</div>
+          <div class="exp-desc">CSAT (Suneung) and school exam preparation, STEM track focus.</div>
+        </div>
+      </div>
+
+      <div class="exp">
+        <div class="exp-period">2025.09. –<br>Present</div>
+        <div>
+          <div class="exp-title">Math-based University Essay Instructor</div>
+          <div class="exp-org">Nonsulmate · Seoul (Remote)</div>
+          <div class="exp-desc">Grading and coaching students on math-based university admissions essays.</div>
+        </div>
+      </div>
+
+      <div class="exp">
+        <div class="exp-period">2023.06. –<br>2026.06.</div>
+        <div>
+          <div class="exp-title">Lead Math Instructor</div>
+          <div class="exp-org">Metrix Mathematics Institute (HB Math&amp;Eng) · Seongnam-Si</div>
+          <div class="exp-desc">
+            <ul>
+              <li>Primary instructor for middle and high school students (grades 2–3) and CSAT retakers</li>
+              <li>Specializing in CSAT preparation for STEM track students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Activities -->
+<section id="activities">
+  <div class="wrap">
+    <p class="sec-label">Activities</p>
+    <h2>Scholarships &amp; Awards</h2>
+    <div class="act-cols">
+
+      <div class="act-col">
+        <h3>Scholarships</h3>
+        <div class="act-item">
+          <div class="act-year">2025.12.</div>
+          <div>
+            <div class="act-name">SCI Publication Scholarship</div>
+            <p class="act-sub">Gachon University — The Highest Honor</p>
+          </div>
+        </div>
+        <div class="act-item">
+          <div class="act-year">Every semester</div>
+          <div>
+            <div class="act-name">Academic Excellence Scholarship</div>
+            <p class="act-sub">Gachon University</p>
+          </div>
+        </div>
+        <div class="act-item">
+          <div class="act-year">3rd year ~</div>
+          <div>
+            <div class="act-name">National Science &amp; Technology Scholarship</div>
+            <p class="act-sub">Ministry of Science and ICT (MSIT)</p>
+          </div>
+        </div>
+        <div class="act-item">
+          <div class="act-year">2024.01.</div>
+          <div>
+            <div class="act-name">Science &amp; Engineering Excellence Scholarship</div>
+            <p class="act-sub">Anyang-Gwacheon Chamber of Commerce and Industry</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="act-col">
+        <h3>Awards</h3>
+        <div class="act-item">
+          <div class="act-year">2026.01.</div>
+          <div>
+            <div class="act-name">P-Career Catch 2 — Outstanding Completion</div>
+            <p class="act-sub">Career Exploration Credit Program · Gachon University · <a href="https://github.com/orgs/Palearn-4-P-proj/repositories" target="_blank" rel="noopener">GitHub</a></p>
+          </div>
+        </div>
+        <div class="act-item">
+          <div class="act-year">2025.05.</div>
+          <div>
+            <div class="act-name">Severance Challenge Award</div>
+            <p class="act-sub">2025 Yonsei Yongin Severance Hospital Healthcare Hackathon</p>
+          </div>
+        </div>
+        <div class="act-item">
+          <div class="act-year">2025.06.</div>
+          <div>
+            <div class="act-name">3rd Place — AI/SW Day Oral Presentation</div>
+            <p class="act-sub">Gachon University · YOLOv5 Children Protection Area detection · <a href="https://github.com/lky473736/luxonis" target="_blank" rel="noopener">GitHub</a></p>
+          </div>
+        </div>
+        <div class="act-item">
+          <div class="act-year">2024.10.</div>
+          <div>
+            <div class="act-name">ICPC Seoul Regional Finalist</div>
+            <p class="act-sub">Team GPT — 168th / 376 teams · KINTEX, Goyang-Si · <a href="https://icpckorea.org/archives/3155" target="_blank" rel="noopener">Official</a></p>
+          </div>
+        </div>
+        <div class="act-item">
+          <div class="act-year">2024.01.</div>
+          <div>
+            <div class="act-name">Grand Prize — Future Design Project</div>
+            <p class="act-sub">Gachon University (1st Place)</p>
+          </div>
+        </div>
+        <div class="act-item">
+          <div class="act-year">2023.06.</div>
+          <div>
+            <div class="act-name">Grand Prize — Software Competition</div>
+            <p class="act-sub">Gachon University (1st Place) · Smart Home with Physical Computing</p>
+          </div>
+        </div>
+        <div class="act-item">
+          <div class="act-year">2018.11.</div>
+          <div>
+            <div class="act-name">Minister of Oceans and Fisheries Award</div>
+            <p class="act-sub">2018 National Student Science and Invention Competition</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <div class="wrap">
+    <p class="sec-label">Projects</p>
+    <h2>Projects &amp; Resources</h2>
+    <div class="proj-list">
+      <a class="proj" href="https://github.com/lky473736/ZSL-HAR" target="_blank" rel="noopener">
+        <div class="proj-name">ZSL-HAR</div>
+        <p class="proj-desc">Zero-shot HAR with contrastive learning on wearable devices.</p>
+        <span class="proj-link">github.com/lky473736/ZSL-HAR</span>
+      </a>
+      <a class="proj" href="https://github.com/lky473736/P2-Perceiver" target="_blank" rel="noopener">
+        <div class="proj-name">P2-Perceiver</div>
+        <p class="proj-desc">Prototype-Guided Physics-Modulated Perceiver for HAR.</p>
+        <span class="proj-link">github.com/lky473736/P2-Perceiver</span>
+      </a>
+      <a class="proj" href="https://github.com/lky473736/CAP-SSM" target="_blank" rel="noopener">
+        <div class="proj-name">CAP-SSM</div>
+        <p class="proj-desc">Context-Aware Prototypes + Selective State-Space Model for wearable HAR.</p>
+        <span class="proj-link">github.com/lky473736/CAP-SSM</span>
+      </a>
+      <a class="proj" href="https://github.com/lky473736/InceptionMK" target="_blank" rel="noopener">
+        <div class="proj-name">InceptionMK</div>
+        <p class="proj-desc">Rotation-robust SSL via multi-scale convolutional backbones.</p>
+        <span class="proj-link">github.com/lky473736/InceptionMK</span>
+      </a>
+      <a class="proj" href="https://github.com/lky473736/ABFA-HAR" target="_blank" rel="noopener">
+        <div class="proj-name">ABFA-HAR</div>
+        <p class="proj-desc">Activity-Based Feature Augmentation with Multi-Kernel TCN + Transformer.</p>
+        <span class="proj-link">github.com/lky473736/ABFA-HAR</span>
+      </a>
+      <a class="proj" href="https://github.com/lky473736/PADR" target="_blank" rel="noopener">
+        <div class="proj-name">PADR</div>
+        <p class="proj-desc">Physics-Aware Disentangled Representation with FiLM conditioning.</p>
+        <span class="proj-link">github.com/lky473736/PADR</span>
+      </a>
+      <a class="proj" href="https://github.com/lky473736/diffusion_DDPM_fall_detection" target="_blank" rel="noopener">
+        <div class="proj-name">Diffusion / DDPM Fall Detection</div>
+        <p class="proj-desc">Anomaly detection using Diffusion, DDIM, DDPM on fall detection datasets.</p>
+        <span class="proj-link">github.com/lky473736/diffusion_DDPM_fall_detection</span>
+      </a>
+      <a class="proj" href="https://github.com/lky473736/learning-ai" target="_blank" rel="noopener">
+        <div class="proj-name">Learning-AI</div>
+        <p class="proj-desc">Personal AI study archive — 101 to expert level (2024–now).</p>
+        <span class="proj-link">github.com/lky473736/learning-ai</span>
+      </a>
+      <a class="proj" href="https://astonishing-antlion-13b.notion.site/Database-about-researching-10fe61796c4280f3be35c003e83a291c" target="_blank" rel="noopener">
+        <div class="proj-name">Database for Insight</div>
+        <p class="proj-desc">All records of paper work and research readings.</p>
+        <span class="proj-link">Notion →</span>
+      </a>
+      <a class="proj" href="https://github.com/lky473736/scarecrow" target="_blank" rel="noopener">
+        <div class="proj-name">Scarecrow</div>
+        <p class="proj-desc">Real-time one-click ZOOM access program for Hyosung High School.</p>
+        <span class="proj-link">github.com/lky473736/scarecrow</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const links  = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+</script>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>© 2026 Gyuyeon Lim</p>
+  </div>
+</footer>
+
+</body>
 </html>
