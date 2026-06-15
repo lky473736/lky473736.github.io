@@ -345,13 +345,13 @@ section h2 {
 
 /* ─── Entry logo ─── */
 .entry-logo-cell {
-  width: 48px;
+  width: 60px;
   padding-top: 3px;
 }
 
 .entry-logo {
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   border-radius: 5px;
   display: block;
@@ -381,7 +381,7 @@ section h2 {
 
 .exp {
   display: grid;
-  grid-template-columns: 52px 106px 1fr;
+  grid-template-columns: 64px 100px 1fr;
   gap: 0 1.25rem;
   padding: 0.9rem 0;
   border-top: 1px solid var(--border);
@@ -429,7 +429,7 @@ section h2 {
 
 .edu {
   display: grid;
-  grid-template-columns: 52px 106px 1fr;
+  grid-template-columns: 64px 100px 1fr;
   gap: 0 1.25rem;
   padding: 0.9rem 0;
   border-top: 1px solid var(--border);
