@@ -1,0 +1,10 @@
+# Local-development-only override. NOT used by GitHub Pages in production.
+# Usage: bundle exec jekyll serve --config _config.yml,_config_dev.yml
+#
+# Production _config.yml sets `url` to the real domain so canonical links,
+# the sitemap, and asset URLs resolve correctly once deployed. But that same
+# absolute URL makes a local `jekyll serve` emit asset links pointing at the
+# live production domain -- which doesn't have these (unpushed) files yet, so
+# the browser's cross-origin request gets blocked and the page loads unstyled.
+# This file points `url` at the local dev server instead, only for local use.
+url: "http://localhost:4321"

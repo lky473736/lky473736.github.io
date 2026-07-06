@@ -1,0 +1,235 @@
+%%% Curriculum Vitae -- Gyuyeon Lim
+%%% Layout adapted from Kieran Healy's kjh-vita template
+%%% (https://github.com/kjhealy/kjh-vita), rebuilt on freely
+%%% redistributable fonts/packages so it compiles with a plain
+%%% TeX Live install (pdflatex, memoir, mathpazo, fontawesome5).
+%%%------------------------------------------------------------------------
+
+\documentclass[10pt,article,oneside]{memoir}
+
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{mathpazo}
+\usepackage{helvet}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[letterpaper,
+  left=1.65in, right=0.6in, top=1.35in, bottom=1in,
+  marginparwidth=1.15in, marginparsep=0.3in,
+  includemp]{geometry}
+\usepackage[colorlinks=true,linkcolor=accent,urlcolor=accent,citecolor=accent,
+  pdftitle={Curriculum Vitae -- Gyuyeon Lim},
+  pdfauthor={Gyuyeon Lim}]{hyperref}
+\usepackage{xurl}
+\usepackage[normalem]{ulem}
+\urlstyle{same}
+
+\definecolor{accent}{HTML}{1B4F91}
+
+%%%------------------------------------------------------------------------
+%%% Local commands
+%%%------------------------------------------------------------------------
+
+\let\orighref\href
+\renewcommand{\href}[2]{\orighref{#1}{\uline{#2}}}
+
+\newcommand{\marginhead}[1]{\marginpar{\raggedleft\sffamily\footnotesize\color{accent} #1}}
+\def\ind{\par\noindent\hangindent=1.05cm\hangafter=1\noindent}
+
+%% Dated entries: a small date/year tag leads the line, with the
+%% hanging indent widened so wrapped lines align under the entry text.
+%% Same font family as body (Palatino, no sans/color) at footnotesize --
+%% matching the existing footnotesize asides (e.g. "(2nd author)") in the doc.
+\newlength{\datecolwidth}
+\settowidth{\datecolwidth}{\footnotesize 2025.02--2025.06}
+\addtolength{\datecolwidth}{0.15cm}
+\newcommand{\cvdate}[1]{\makebox[\datecolwidth][l]{\footnotesize #1}}
+\def\indd{\par\noindent\hangindent=\datecolwidth\hangafter=1\noindent}
+
+\renewcommand{\labelitemi}{\textendash}
+\newlist{subitems}{itemize}{2}
+\newlength{\subindent}
+\setlength{\subindent}{\datecolwidth}
+\addtolength{\subindent}{0.4cm}
+\setlist[subitems]{leftmargin=\subindent, itemsep=1pt, topsep=3pt, parsep=0pt, label=\textendash, font=\footnotesize}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\tolerance=1200
+\emergencystretch=3em
+\pagestyle{plain}
+
+%%%------------------------------------------------------------------------
+%%% Document
+%%%------------------------------------------------------------------------
+\begin{document}
+
+\vspace*{1.2cm}
+
+%% Contact / affiliation block
+\begin{minipage}[t]{2.4in}
+  {\footnotesize
+  B.S. Candidate, Computer Engineering \\
+  Gachon University \\
+  Seongnam-si, South Korea}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{1.9in}
+  \raggedleft
+  {\footnotesize
+  \faEnvelope\ \href{mailto:lky473736@gmail.com}{lky473736@gmail.com} \\
+  \faGithub\ \href{https://github.com/lky473736}{github.com/lky473736} \\
+  \faLinkedin\ \href{https://www.linkedin.com/in/gyuyeon-lim-a24016278/}{LinkedIn} \\
+  \faGraduationCap\ \href{https://scholar.google.com/citations?user=S6SqhsoAAAAJ}{Google Scholar}}
+\end{minipage}
+
+\bigskip
+
+\noindent{\LARGE\scshape Gyuyeon Lim}
+\reversemarginpar
+
+\bigskip
+\vspace{0.5cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{education}
+
+\indd \cvdate{2023--2027} B.S. in Computer Engineering, Gachon University, Seongnam-si (expected).
+\begin{subitems}
+  \item GPA: 4.41 / 4.5 (121 of 120 credits)
+  \item Research guidance from Prof.\ Myung-Kyu Yi, Institute of Biomedical Engineering, Hanyang University (since 2024.06)
+  \item Graduation thesis advised by Prof.\ Yourim Yoon, Gachon University
+\end{subitems}
+
+\medskip
+\indd \cvdate{2020--2023} Mathematics \& Science Intensive Program, Hyosung High School, Seongnam-si.
+
+\bigskip
+\vspace{0.15cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}research \newline interests}
+
+\ind \emph{Representation Learning.} Learning compact, structured embeddings from high-dimensional data. Focuses on contrastive and self-supervised methods, data embedding, and latent space geometry.
+
+\medskip
+\ind \emph{Deep Learning on Time Series.} Temporal and spatio-temporal modeling for forecasting and classification of multivariate sensor streams. Covers sequence models, graph-based dependencies, and large-scale time-series architectures.
+
+\medskip
+\ind \emph{AI for Science.} Applying deep learning to physical and biological signals --- IMU, EEG, and multivariate sensor data. Integrates physics priors, domain constraints, and signal structure into model design.
+
+\bigskip
+\vspace{0.15cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}publications \newline (journal \newline articles)}
+
+\indd \cvdate{2026.07} Gyuyeon Lim and Myung-Kyu Yi. ``LPSN: A Learnable Parametric Spectral Network for Wearable Human Activity Recognition.'' \emph{IEEE Sensors Journal}, Early Access (IF~4.5). \href{https://ieeexplore.ieee.org/document/11585918}{DOI}.
+
+\medskip
+\indd \cvdate{2026.04} Gyuyeon Lim and Myung-Kyu Yi. ``Rotation-Robust Self-Supervised Learning for IMU-Based HAR with Multi-Scale Convolutional Backbones.'' \emph{IEEE Transactions on Consumer Electronics} (IF~10.9). \href{https://doi.org/10.1109/TCE.2026.3682243}{DOI} \textbullet\ \href{https://github.com/lky473736/InceptionMK}{Code (InceptionMK)}.
+
+\medskip
+\indd \cvdate{2026.03} JunYoung Park, Gyuyeon Lim, and Myung-Kyu Yi. ``Dynamics-Aware Action State Flow for Wearable Human Activity Recognition.'' \emph{IEEE Sensors Journal} (IF~4.5). {\footnotesize (2nd author)} \href{https://doi.org/10.1109/JSEN.2026.3675557}{DOI}.
+
+\medskip
+\indd \cvdate{2026.03} Gyuyeon Lim and Myung-Kyu Yi. ``Robust Sensor-Based Activity Recognition via Physics-Aware Disentangled Representation Learning and Feature-wise Linear Modulation Conditioning.'' \emph{IEEE Sensors Journal} (IF~4.5). \href{https://doi.org/10.1109/JSEN.2026.3673698}{DOI} \textbullet\ \href{https://github.com/lky473736/PADR}{Code (PADR)}.
+
+\medskip
+\indd \cvdate{2026.02} Gyuyeon Lim and Myung-Kyu Yi. ``CAP-SSM: Context-Aware Prototypes and Selective State-Space Modeling for Efficient Wearable Human Activity Recognition.'' \emph{IEEE Sensors Journal} (IF~4.5). \href{https://doi.org/10.1109/JSEN.2026.3663003}{DOI} \textbullet\ \href{https://github.com/lky473736/CAP-SSM}{Code (CAP-SSM)}.
+
+\medskip
+\indd \cvdate{2026.01} Gyuyeon Lim and Myung-Kyu Yi. ``Prototype-Guided Physics-Modulated Perceiver for Human Activity Recognition.'' \emph{IEEE Internet of Things Journal} (IF~8.9). \href{https://doi.org/10.1109/JIOT.2026.3658863}{DOI} \textbullet\ \href{https://github.com/lky473736/P2-Perceiver}{Code (P2-Perceiver)}.
+
+\medskip
+\indd \cvdate{2025.09} Gyuyeon Lim and Myung-Kyu Yi. ``Contrastive Learning for Zero-Shot Human Activity Recognition Using Labeled Simple Actions on Wearable Devices.'' \emph{IEEE Sensors Journal} (IF~4.5). \href{https://doi.org/10.1109/JSEN.2025.3613260}{DOI} \textbullet\ \href{https://github.com/lky473736/ZSL-HAR}{Code (ZSL-HAR)}.
+
+\bigskip
+\vspace{0.15cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}research \newline experience}
+
+\indd \cvdate{2025.12--Present} Research Intern, Seoul National University Graduate School of Data Science, \href{https://www.skiml.snu.ac.kr/home}{SKI-ML} (Prof.\ Jay-Yoon Lee), Seoul.
+\begin{subitems}
+  \item Structure and Knowledge Injection into Machine Learning (SKI-ML lab)
+  \item Spatio-temporal multivariate modeling for large-scale time-series with graph dependencies (targeting AAAI 2027)
+  \item Co-authored NeuroX-EEG, submitted to NeurIPS 2026 in collaboration with the Connectome Lab (Prof.\ Jiook Cha)
+\end{subitems}
+
+\medskip
+\indd \cvdate{2025.02--2025.06} Undergraduate Research Intern, Seoul National University Hospital, \href{https://sites.google.com/view/snuh-bmi-lab/home}{BMI Lab} (Prof.\ Kwangsoo Kim), Yeongeon, Seoul.
+\begin{subitems}
+  \item Biomedical Informatics Lab (SNUH BMI LAB)
+  \item Holter Foundation Model and MLOps Development Team
+\end{subitems}
+
+\bigskip
+\vspace{0.15cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}teaching \newline experience}
+
+\indd \cvdate{2026.01--Present} High School Math Instructor, Myungmun Seoil Academy Premium, Seongnam-si.
+\begin{subitems}
+  \item CSAT (Suneung) and school exam preparation, STEM track focus
+\end{subitems}
+
+\medskip
+\indd \cvdate{2025.09--Present} Math-based University Essay Instructor, \href{https://www.nonsoolmate.com/}{Nonsoolmate}, Seoul (Remote).
+\begin{subitems}
+  \item Grading and coaching students on math-based university admissions essays
+\end{subitems}
+
+\medskip
+\indd \cvdate{2023.06--2026.06} Lead Math Instructor, Metrix Mathematics Institute (HB Math\&Eng), Seongnam-si.
+\begin{subitems}
+  \item Primary instructor for middle and high school students (grades 2--3) and CSAT retakers
+  \item Specializing in CSAT preparation for STEM track students
+\end{subitems}
+
+\bigskip
+\vspace{0.15cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}scholarships}
+
+\indd \cvdate{2025.12} SCI Publication Scholarship, Gachon University --- the Highest Honor.
+
+\medskip
+\indd \cvdate{Every semester} Academic Excellence Scholarship, Gachon University.
+
+\medskip
+\indd \cvdate{From 3rd year} National Science \& Technology Scholarship, Ministry of Science and ICT (MSIT).
+
+\medskip
+\indd \cvdate{2024.01} Science \& Engineering Excellence Scholarship, Anyang-Gwacheon Chamber of Commerce and Industry.
+
+\bigskip
+\vspace{0.15cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}honors \newline \& awards}
+
+\indd \cvdate{2026.01} P-Career Catch 2 --- Outstanding Completion, Career Exploration Credit Program, Gachon University. \href{https://github.com/orgs/Palearn-4-P-proj/repositories}{GitHub}.
+
+\medskip
+\indd \cvdate{2025.05} Severance Challenge Award, 2025 Yonsei Yongin Severance Hospital Healthcare Hackathon.
+
+\medskip
+\indd \cvdate{2025.06} 3rd Place, AI/SW Day Oral Presentation, Gachon University --- YOLOv5 Children Protection Area detection. \href{https://github.com/lky473736/luxonis}{GitHub}.
+
+\medskip
+\indd \cvdate{2024.10} ICPC Seoul Regional Finalist, Team GPT --- 168th of 376 teams, KINTEX, Goyang-si. \href{https://icpckorea.org/archives/3155}{Official}.
+
+\medskip
+\indd \cvdate{2024.01} Grand Prize, Future Design Project, Gachon University (1st place).
+
+\medskip
+\indd \cvdate{2023.06} Grand Prize, Software Competition, Gachon University (1st place) --- Smart Home with Physical Computing.
+
+\medskip
+\indd \cvdate{2018.11} Minister of Oceans and Fisheries Award, 2018 National Student Science and Invention Competition.
+
+\end{document}
