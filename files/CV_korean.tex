@@ -1,0 +1,320 @@
+%%% 이력서 (국문) -- 임규연 (Gyuyeon Lim)
+%%% Layout adapted from Kieran Healy's kjh-vita template
+%%% (https://github.com/kjhealy/kjh-vita).
+%%% 컴파일러: XeLaTeX  (Overleaf: Menu → Settings → Compiler → XeLaTeX)
+%%%------------------------------------------------------------------------
+
+\documentclass[10pt,article,oneside]{memoir}
+
+\usepackage{fontspec}
+\usepackage{kotex}
+\usepackage{microtype}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage[letterpaper,
+left=1.65in, right=0.4in, top=1.0in, bottom=1in,
+marginparwidth=1.15in, marginparsep=0.3in,
+includemp]{geometry}
+\usepackage[colorlinks=true,linkcolor=accent,urlcolor=accent,citecolor=accent,
+pdftitle={이력서 -- 임규연 (Gyuyeon Lim)},
+pdfauthor={임규연 (Gyuyeon Lim)}]{hyperref}
+\usepackage{xurl}
+\usepackage[normalem]{ulem}
+\urlstyle{same}
+
+%% Latin: TeX Gyre Pagella (Palatino) / Heros (Helvetica) -- same look as the English CV.
+\setmainfont{texgyrepagella}[
+  Extension=.otf, UprightFont=*-regular, BoldFont=*-bold,
+  ItalicFont=*-italic, BoldItalicFont=*-bolditalic]
+\setsansfont{texgyreheros}[
+  Extension=.otf, UprightFont=*-regular, BoldFont=*-bold,
+  ItalicFont=*-italic, BoldItalicFont=*-bolditalic]
+%% Hangul: Noto Serif CJK KR (serif, matches Palatino); sans for margin heads.
+\setmainhangulfont{Noto Serif CJK KR}[BoldFont={* Bold}]
+\setsanshangulfont{Noto Sans CJK KR}[BoldFont={* Bold}]
+
+\definecolor{accent}{HTML}{1B4F91}
+
+%%%------------------------------------------------------------------------
+%%% Local commands
+%%%------------------------------------------------------------------------
+
+\let\orighref\href
+\renewcommand{\href}[2]{\orighref{#1}{\uline{#2}}}
+
+\newcommand{\marginhead}[1]{\marginpar{\raggedleft\sffamily\footnotesize\color{accent} #1}}
+\def\ind{\par\noindent\hangindent=1.0cm\hangafter=1\noindent}
+
+%% Own name, bolded in author lists.
+\newcommand{\me}{\textbf{Gyuyeon Lim}}
+
+%% Dated entries: a small date/year tag leads the line, with the
+%% hanging indent widened so wrapped lines align under the entry text.
+\newlength{\datecolwidth}
+\settowidth{\datecolwidth}{\footnotesize 2025.02--2025.06}
+\addtolength{\datecolwidth}{0.15cm}
+\newcommand{\cvdate}[1]{\makebox[\datecolwidth][l]{\footnotesize #1}}
+\def\indd{\par\noindent\hangindent=\datecolwidth\hangafter=1\noindent}
+
+%% Figure column shared by the header photo and the research-interest figures.
+\newlength{\interestfig}
+\setlength{\interestfig}{1in}
+\newlength{\interestgap}
+\setlength{\interestgap}{0.2in}
+
+%% Research-interest entry: fixed-size square figure on the left, text on the right.
+\newcommand{\interest}[3]{% #1 = figure file, #2 = title, #3 = description
+  \par\noindent
+  \begin{minipage}[t]{\interestfig}
+    \vspace{0pt}\includegraphics[width=\interestfig,height=\interestfig]{#1}
+  \end{minipage}%
+  \hspace{\interestgap}%
+  \begin{minipage}[t]{\dimexpr\linewidth-\interestfig-\interestgap\relax}
+    \vspace{0pt}\textbf{#2.} #3
+  \end{minipage}\par}
+
+%% Header photo box (width = figure column; its height drives the header height).
+\newsavebox{\photobox}
+
+\renewcommand{\labelitemi}{\textendash}
+\newlist{subitems}{itemize}{2}
+\newlength{\subindent}
+\setlength{\subindent}{\datecolwidth}
+\addtolength{\subindent}{0.4cm}
+\setlist[subitems]{leftmargin=\subindent, itemsep=1pt, topsep=3pt, parsep=0pt, label=\textendash, font=\footnotesize}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\medskipamount}{8pt plus 2pt minus 2pt}
+\tolerance=1200
+\emergencystretch=3em
+\pagestyle{plain}
+
+%%%------------------------------------------------------------------------
+%%% Document
+%%%------------------------------------------------------------------------
+\begin{document}
+
+\vspace*{0.5cm}
+
+%% Header: photo (figure column) | name on top, aligned info/contact rows at the bottom
+\sbox{\photobox}{\includegraphics[width=\interestfig]{photo.png}}%
+\noindent
+\begin{minipage}[t]{\interestfig}
+\vspace{0pt}\usebox{\photobox}
+\end{minipage}%
+\hspace{\interestgap}%
+\begin{minipage}[t][\ht\photobox][t]{\dimexpr\linewidth-\interestfig-\interestgap\relax}
+\vspace{0pt}
+{\huge 임규연}\quad{\Large\scshape Gyuyeon Lim}
+
+\vfill
+{\footnotesize\renewcommand{\arraystretch}{1.35}%
+\begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+컴퓨터공학전공 학사과정 (전공심화과정) &
+  \faEnvelope\ \href{mailto:lky473736@gmail.com}{lky473736@gmail.com} \\
+가천대학교 &
+  \faGithub\ \href{https://github.com/lky473736}{github.com/lky473736} \\
+경기도 성남시 &
+  \faLinkedin\ \href{https://www.linkedin.com/in/gyuyeon-lim-a24016278/}{LinkedIn}\quad
+  \faGraduationCap\ \href{https://scholar.google.com/citations?user=S6SqhsoAAAAJ}{Google Scholar}
+\end{tabular*}}
+\end{minipage}
+
+\reversemarginpar
+
+\bigskip
+\vspace{0.8cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{education}
+
+\indd \cvdate{2023--2027} \textbf{가천대학교 컴퓨터공학전공 학사} (전공심화과정), 경기도 성남시 (졸업 예정).
+\begin{subitems}
+\item 평점: \textbf{4.41 / 4.5} (백분위 \textbf{99.10\%}, 졸업기준 120학점 중 121학점 이수)
+\item 학부 연구 지도: 이명규 교수님 (한양대학교 의공학연구소, 2024.06--2025.12)
+\item 졸업논문 지도교수: 윤유림 교수님 (가천대학교)
+\end{subitems}
+
+\medskip
+\indd \cvdate{2020--2023} \textbf{효성고등학교 수학·과학 중점과정}, 경기도 성남시.
+
+\bigskip
+\vspace{0.25cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}research \newline interests}
+
+\interest{fig1.jpeg}{Machine Learning}{고차원 데이터로부터 간결하고 구조화된, 강건한 임베딩을 학습하는 연구를 합니다. 특히 데이터에 공통으로 담긴 불변 정보와 관측 조건에 따라 달라지는 변동을 분리하여, 처음 보는 환경에서도 유효하게 작동하는 표현을 학습하는 데 관심이 있습니다. 이를 위해 대조 학습과 자기지도 학습, 데이터 임베딩, 잠재 공간의 기하 구조를 주로 다룹니다.}
+
+\medskip
+\interest{fig2.jpeg}{Temporal or Spatiotemporal Modeling}{다변량 센서 스트림의 예측과 분류를 위한 시계열 및 시공간 모델링을 연구합니다. 시퀀스 모델, 그래프 기반의 변수 간 의존성 모델링, 대규모 시계열 아키텍처를 다룹니다.}
+
+\medskip
+\interest{fig3.jpeg}{AI for Science}{IMU, EEG와 같은 물리·생체 신호 및 다변량 센서 데이터에 딥러닝을 적용합니다. 물리적 사전지식과 도메인 제약, 신호 고유의 구조를 모델 설계에 녹여내는 방향을 지향합니다.}
+
+\bigskip
+\vspace{0.25cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}publications \newline (conference \newline submissions)}
+
+\indd \cvdate{Preprinted} Junha Kim$^*$, \me$^*$, and Jay-Yoon Lee. ``STREAM: Dynamic Channel Graphs with Autoregressive State Propagation for Multivariate Forecasting.'' \emph{submitted}.\label{pub:stream}
+
+\medskip
+\indd \cvdate{Preprinted} Taeyang Lee$^*$, \me, Sebin Lee, Kevin Valencia, Jay-Yoon Lee, Xihaier Luo, Shinjae Yoo, Jiook Cha, and David Keetae Park. ``NeuroX-EEG: Scalp Field Inpainting for Zero-Shot EEG Super-Resolution.'' {\footnotesize (제2저자)} \emph{submitted}.\label{pub:neurox}
+
+\medskip
+\indd \cvdate{Preprinted} Yidu Song$^*$, \me$^*$, and Ahyoung Choi. ``ENURI: Evidence Negotiation Using Reasoning over Images.'' \emph{submitted}.
+
+\bigskip
+\vspace{0.25cm}
+
+\marginhead{{\vskip 0.3em}publications \newline (journal \newline articles)}
+
+\indd \cvdate{2026.09} \me$^*$ and Yourim Yoon. ``Global-Local Dual Prototype Network for Interpretable Time Series Classification.'' \emph{Asia-Pacific Journal of Convergent Research Interchange}, Vol.~12, No.~9, pp.~293--305 (2026). \href{http://dx.doi.org/10.47116/apjcri.2026.09.20}{DOI}.
+
+\medskip
+\indd \cvdate{2026.07} \me$^*$ and Myung-Kyu Yi. ``LPSN: A Learnable Parametric Spectral Network for Wearable Human Activity Recognition.'' \emph{IEEE Sensors Journal}, Early Access (IF~4.5). \href{https://ieeexplore.ieee.org/document/11585918}{DOI}.
+
+\medskip
+\indd \cvdate{2026.04} \me$^*$ and Myung-Kyu Yi. ``Rotation-Robust Self-Supervised Learning for IMU-Based HAR with Multi-Scale Convolutional Backbones.'' \emph{IEEE Transactions on Consumer Electronics} (IF~10.9). \href{https://doi.org/10.1109/TCE.2026.3682243}{DOI} \textbullet\ \href{https://github.com/lky473736/InceptionMK}{Code (InceptionMK)}.
+
+\medskip
+\indd \cvdate{2026.03} JunYoung Park$^*$, \me, and Myung-Kyu Yi. ``Dynamics-Aware Action State Flow for Wearable Human Activity Recognition.'' \emph{IEEE Sensors Journal} (IF~4.5). {\footnotesize (제2저자)} \href{https://doi.org/10.1109/JSEN.2026.3675557}{DOI}.
+
+\medskip
+\indd \cvdate{2026.03} \me$^*$ and Myung-Kyu Yi. ``Robust Sensor-Based Activity Recognition via Physics-Aware Disentangled Representation Learning and Feature-wise Linear Modulation Conditioning.'' \emph{IEEE Sensors Journal} (IF~4.5). \href{https://doi.org/10.1109/JSEN.2026.3673698}{DOI} \textbullet\ \href{https://github.com/lky473736/PADR}{Code (PADR)}.
+
+\medskip
+\indd \cvdate{2026.02} \me$^*$ and Myung-Kyu Yi. ``CAP-SSM: Context-Aware Prototypes and Selective State-Space Modeling for Efficient Wearable Human Activity Recognition.'' \emph{IEEE Sensors Journal} (IF~4.5). \href{https://doi.org/10.1109/JSEN.2026.3663003}{DOI} \textbullet\ \href{https://github.com/lky473736/CAP-SSM}{Code (CAP-SSM)}.
+
+\medskip
+\indd \cvdate{2026.01} \me$^*$ and Myung-Kyu Yi. ``Prototype-Guided Physics-Modulated Perceiver for Human Activity Recognition.'' \emph{IEEE Internet of Things Journal} (IF~8.9). \href{https://doi.org/10.1109/JIOT.2026.3658863}{DOI} \textbullet\ \href{https://github.com/lky473736/P2-Perceiver}{Code (P2-Perceiver)}.
+
+\medskip
+\indd \cvdate{2025.09} \me$^*$ and Myung-Kyu Yi. ``Contrastive Learning for Zero-Shot Human Activity Recognition Using Labeled Simple Actions on Wearable Devices.'' \emph{IEEE Sensors Journal} (IF~4.5). \href{https://doi.org/10.1109/JSEN.2025.3613260}{DOI} \textbullet\ \href{https://github.com/lky473736/ZSL-HAR}{Code (ZSL-HAR)}.
+
+\bigskip
+\vspace{0.25cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}research \newline experience}
+
+\indd \cvdate{2025.12--현재} \textbf{연구인턴}, 서울대학교 데이터사이언스대학원 \href{https://www.skiml.snu.ac.kr/home}{SKI-ML} 연구실, 서울.
+\begin{subitems}
+\item 지도교수: 이재윤 교수님
+\item Structure and Knowledge Injection into Machine Learning (SKI-ML) 연구실
+\item 그래프 의존성을 갖는 대규모 다변량 시계열의 시공간 모델링 연구 (\hyperref[pub:stream]{STREAM})
+\item 차지욱 교수님 연구실(Connectome Lab)과의 공동연구로 \hyperref[pub:neurox]{NeuroX-EEG} 공저
+\end{subitems}
+
+\medskip
+\indd \cvdate{2025.02--2025.06} \textbf{학부연구인턴}, 서울대학교병원 \href{https://sites.google.com/view/snuh-bmi-lab/home}{BMI Lab}, 서울 연건.
+\begin{subitems}
+\item 지도교수: 김광수 교수님
+\item 의생명정보학 연구실 (Biomedical Informatics Lab)
+\item Holter 파운데이션 모델 및 MLOps 개발팀
+\end{subitems}
+
+\bigskip
+\vspace{0.25cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}academic \newline service}
+
+\indd \cvdate{2026--현재} \textbf{논문 심사위원 (Reviewer)}
+\begin{subitems}
+\item \emph{IEEE Internet of Things Journal}
+\item \emph{Informatics and Health}
+\end{subitems}
+
+\bigskip
+\vspace{0.25cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}teaching \newline experience}
+
+\medskip
+\indd \cvdate{2025.09--현재} \textbf{수리논술 강사}, \href{https://www.nonsoolmate.com/}{논술메이트(Nonsoolmate)}, 서울 (원격).
+\begin{subitems}
+\item 대학 입시 수리논술 답안 첨삭 및 코칭
+\end{subitems}
+
+\medskip
+\indd \cvdate{2026.01--2026.08} \textbf{고등부 수학 강사}, 명문서일학원 프리미엄, 경기도 성남시.
+\begin{subitems}
+\item 이과 중심 수능 및 내신 대비
+\end{subitems}
+
+\medskip
+\indd \cvdate{2023.06--2026.06} \textbf{수학 대표강사}, 메트릭스수학학원 (HB Math\&Eng), 경기도 성남시.
+\begin{subitems}
+\item 중·고등학교 2--3학년 및 N수생 대상 주강사
+\item 이과 수능 대비 전문
+\end{subitems}
+
+\bigskip
+\vspace{0.25cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}scholarships}
+
+\indd \cvdate{2025.12} \textbf{SCI 논문 게재 장학금}, 가천대학교 --- 최고 등급.
+
+\medskip
+\indd \cvdate{매 학기} \textbf{성적우수장학금}, 가천대학교.
+
+\medskip
+\indd \cvdate{3학년부터} \textbf{이공계 국가우수장학금}, 과학기술정보통신부.
+
+\medskip
+\indd \cvdate{2024.01} \textbf{이공계 우수 장학금}, 안양과천상공회의소.
+
+\bigskip
+\vspace{0.25cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}honors \newline \& awards}
+
+\medskip
+\indd \cvdate{2026.08} SNU AI Challenge 2026 --- \textbf{최종 21위 / 129팀} (개인 참가). ``Temporal Event Matching via Permutation-scored Ordering Hard-Negative Listwise Ranking for Chronological Frame Reconstruction with Vision-Language Models.'' \href{https://snuaichallenge.github.io/assets/reports/Gyuyeon\%20Lim.pdf}{Report}.
+
+\medskip
+\indd \cvdate{2026.08} \textbf{연구부문 2위}, 제1회 가천대학교 컴퓨터공학·인공지능 학술제. \href{https://github.com/song2du/ENURI/}{ENURI}.
+
+\medskip
+\indd \cvdate{2026.01} P-Career Catch 2 --- \textbf{우수 수료}, 가천대학교 진로탐색학점제. \href{https://github.com/orgs/Palearn-4-P-proj/repositories}{GitHub}.
+
+\medskip
+\indd \cvdate{2025.05} \textbf{세브란스 챌린지상}, 2025 용인세브란스병원 헬스케어 해커톤.
+
+\medskip
+\indd \cvdate{2025.06} \textbf{3위}, 가천대학교 AI/SW Day 구두발표 --- YOLOv5 기반 어린이보호구역 탐지. \href{https://github.com/lky473736/luxonis}{GitHub}.
+
+\medskip
+\indd \cvdate{2024.10} \textbf{가천대학교 대표 ICPC 서울 리저널 본선 진출}, Team GPT --- 376팀 중 168위, KINTEX, 경기도 고양시. \href{https://icpckorea.org/archives/3155}{Official}.
+
+\medskip
+\indd \cvdate{2024.01} \textbf{대상 (1위)}, 가천대학교 내진설계(미래설계) 프로젝트.
+
+\medskip
+\indd \cvdate{2023.06} \textbf{대상 (1위)}, 가천대학교 소프트웨어 경진대회 --- 피지컬 컴퓨팅 기반 스마트홈.
+
+\medskip
+\indd \cvdate{2018.11} \textbf{해양수산부장관상}, 2018 전국학생과학발명품경진대회.
+
+\bigskip
+\vspace{0.25cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}certifications}
+
+\indd \cvdate{2026.09} \textbf{TEPS} 340점 (2등급) --- 어학, 서울대학교 TEPS관리위원회.
+
+\medskip
+\indd \cvdate{2025.05} \textbf{AICE Associate} --- 기술(AI), KT.
+
+\end{document}

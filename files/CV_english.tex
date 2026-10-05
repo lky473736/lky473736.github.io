@@ -1,0 +1,314 @@
+%%% Curriculum Vitae -- Gyuyeon Lim
+%%% Layout adapted from Kieran Healy's kjh-vita template
+%%% (https://github.com/kjhealy/kjh-vita), rebuilt on freely
+%%% redistributable fonts/packages so it compiles with a plain
+%%% TeX Live install (pdflatex, memoir, mathpazo, fontawesome5).
+%%%------------------------------------------------------------------------
+
+\documentclass[10pt,article,oneside]{memoir}
+
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{mathpazo}
+\usepackage{helvet}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage[letterpaper,
+left=1.65in, right=0.4in, top=1.0in, bottom=1in,
+marginparwidth=1.15in, marginparsep=0.3in,
+includemp]{geometry}
+\usepackage[colorlinks=true,linkcolor=accent,urlcolor=accent,citecolor=accent,
+pdftitle={Curriculum Vitae -- Gyuyeon Lim},
+pdfauthor={Gyuyeon Lim}]{hyperref}
+\usepackage{xurl}
+\usepackage[normalem]{ulem}
+\urlstyle{same}
+
+\definecolor{accent}{HTML}{1B4F91}
+
+%%%------------------------------------------------------------------------
+%%% Local commands
+%%%------------------------------------------------------------------------
+
+\let\orighref\href
+\renewcommand{\href}[2]{\orighref{#1}{\uline{#2}}}
+
+\newcommand{\marginhead}[1]{\marginpar{\raggedleft\sffamily\footnotesize\color{accent} #1}}
+\def\ind{\par\noindent\hangindent=1.0cm\hangafter=1\noindent}
+
+%% Own name, bolded in author lists.
+\newcommand{\me}{\textbf{Gyuyeon Lim}}
+
+%% Dated entries: a small date/year tag leads the line, with the
+%% hanging indent widened so wrapped lines align under the entry text.
+%% Same font family as body (Palatino, no sans/color) at footnotesize --
+%% matching the existing footnotesize asides (e.g. "(2nd author)") in the doc.
+\newlength{\datecolwidth}
+\settowidth{\datecolwidth}{\footnotesize 2025.02--2025.06}
+\addtolength{\datecolwidth}{0.15cm}
+\newcommand{\cvdate}[1]{\makebox[\datecolwidth][l]{\footnotesize #1}}
+\def\indd{\par\noindent\hangindent=\datecolwidth\hangafter=1\noindent}
+
+%% Figure column shared by the header photo and the research-interest figures,
+%% so all of them line up in one column.
+\newlength{\interestfig}
+\setlength{\interestfig}{1in}
+\newlength{\interestgap}
+\setlength{\interestgap}{0.2in}
+
+%% Research-interest entry: fixed-size square figure on the left, text on the right.
+\newcommand{\interest}[3]{% #1 = figure file, #2 = title, #3 = description
+  \par\noindent
+  \begin{minipage}[t]{\interestfig}
+    \vspace{0pt}\includegraphics[width=\interestfig,height=\interestfig]{#1}
+  \end{minipage}%
+  \hspace{\interestgap}%
+  \begin{minipage}[t]{\dimexpr\linewidth-\interestfig-\interestgap\relax}
+    \vspace{0pt}\textbf{#2.} #3
+  \end{minipage}\par}
+
+%% Header photo box (width = figure column; its height drives the header height).
+\newsavebox{\photobox}
+
+\renewcommand{\labelitemi}{\textendash}
+\newlist{subitems}{itemize}{2}
+\newlength{\subindent}
+\setlength{\subindent}{\datecolwidth}
+\addtolength{\subindent}{0.4cm}
+\setlist[subitems]{leftmargin=\subindent, itemsep=1pt, topsep=3pt, parsep=0pt, label=\textendash, font=\footnotesize}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\medskipamount}{8pt plus 2pt minus 2pt}
+\tolerance=1200
+\emergencystretch=3em
+\pagestyle{plain}
+
+%%%------------------------------------------------------------------------
+%%% Document
+%%%------------------------------------------------------------------------
+\begin{document}
+
+\vspace*{0.5cm}
+
+%% Header: photo (figure column) | name on top, aligned info/contact rows at the bottom
+\sbox{\photobox}{\includegraphics[width=\interestfig]{photo.png}}%
+\noindent
+\begin{minipage}[t]{\interestfig}
+\vspace{0pt}\usebox{\photobox}
+\end{minipage}%
+\hspace{\interestgap}%
+\begin{minipage}[t][\ht\photobox][t]{\dimexpr\linewidth-\interestfig-\interestgap\relax}
+\vspace{0pt}
+{\huge\scshape Gyuyeon Lim}
+
+\vfill
+{\footnotesize\renewcommand{\arraystretch}{1.35}%
+\begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+B.S. Candidate, Computer Engineering &
+  \faEnvelope\ \href{mailto:lky473736@gmail.com}{lky473736@gmail.com} \\
+Gachon University &
+  \faGithub\ \href{https://github.com/lky473736}{github.com/lky473736} \\
+Seongnam-si, South Korea &
+  \faLinkedin\ \href{https://www.linkedin.com/in/gyuyeon-lim-a24016278/}{LinkedIn}\quad
+  \faGraduationCap\ \href{https://scholar.google.com/citations?user=S6SqhsoAAAAJ}{Google Scholar}
+\end{tabular*}}
+\end{minipage}
+
+\reversemarginpar
+
+\bigskip
+\vspace{0.8cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{education}
+
+\indd \cvdate{2023--2027} \textbf{B.S. in Computer Engineering} (Advanced Major Track), Gachon University, Seongnam-si (expected).
+\begin{subitems}
+\item GPA: \textbf{4.41 / 4.5} (Percentile \textbf{99.10\%}; 121 of 120 credits)
+\item Research guidance from Prof.\ Myung-Kyu Yi, Institute of Biomedical Engineering, Hanyang University (2024.06--2025.12)
+\item Graduation thesis advised by Prof.\ Yourim Yoon, Gachon University
+\end{subitems}
+
+\medskip
+\indd \cvdate{2020--2023} \textbf{Mathematics \& Science Intensive Program}, Hyosung High School, Seongnam-si.
+
+\bigskip
+\vspace{0.25cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}research \newline interests}
+
+\interest{fig1.jpeg}{Machine Learning}{Learning compact, structured, and robust embeddings from high-dimensional data. Focuses on robust representations that remain valid in unseen environments by disentangling shared, invariant information from observation-dependent variation, together with contrastive and self-supervised methods, data embedding, and latent space geometry.}
+
+\medskip
+\interest{fig2.jpeg}{Temporal or Spatiotemporal Modeling}{Temporal and spatio-temporal modeling for forecasting and classification of multivariate sensor streams. Covers sequence models, graph-based dependencies, and large-scale time-series architectures.}
+
+\medskip
+\interest{fig3.jpeg}{AI for Science}{Applying deep learning to physical and biological signals --- IMU, EEG, and multivariate sensor data. Integrates physics priors, domain constraints, and signal structure into model design.}
+
+\bigskip
+\vspace{0.25cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}publications \newline (conference \newline submissions)}
+
+\indd \cvdate{Preprinted} Junha Kim$^*$, \me$^*$, and Jay-Yoon Lee. ``STREAM: Dynamic Channel Graphs with Autoregressive State Propagation for Multivariate Forecasting.'' \emph{submitted}.\label{pub:stream}
+
+\medskip
+\indd \cvdate{Preprinted} Taeyang Lee$^*$, \me, Sebin Lee, Kevin Valencia, Jay-Yoon Lee, Xihaier Luo, Shinjae Yoo, Jiook Cha, and David Keetae Park. ``NeuroX-EEG: Scalp Field Inpainting for Zero-Shot EEG Super-Resolution.'' {\footnotesize (2nd author)} \emph{submitted}.\label{pub:neurox}
+
+\medskip
+\indd \cvdate{Preprinted} Yidu Song$^*$, \me$^*$, and Ahyoung Choi. ``ENURI: Evidence Negotiation Using Reasoning over Images.'' \emph{submitted}.
+
+\bigskip
+\vspace{0.25cm}
+
+\marginhead{{\vskip 0.3em}publications \newline (journal \newline articles)}
+
+\indd \cvdate{2026.09} \me$^*$ and Yourim Yoon. ``Global-Local Dual Prototype Network for Interpretable Time Series Classification.'' \emph{Asia-Pacific Journal of Convergent Research Interchange}, Vol.~12, No.~9, pp.~293--305 (2026). \href{http://dx.doi.org/10.47116/apjcri.2026.09.20}{DOI}.
+
+\medskip
+\indd \cvdate{2026.07} \me$^*$ and Myung-Kyu Yi. ``LPSN: A Learnable Parametric Spectral Network for Wearable Human Activity Recognition.'' \emph{IEEE Sensors Journal}, Early Access (IF~4.5). \href{https://ieeexplore.ieee.org/document/11585918}{DOI}.
+
+\medskip
+\indd \cvdate{2026.04} \me$^*$ and Myung-Kyu Yi. ``Rotation-Robust Self-Supervised Learning for IMU-Based HAR with Multi-Scale Convolutional Backbones.'' \emph{IEEE Transactions on Consumer Electronics} (IF~10.9). \href{https://doi.org/10.1109/TCE.2026.3682243}{DOI} \textbullet\ \href{https://github.com/lky473736/InceptionMK}{Code (InceptionMK)}.
+
+\medskip
+\indd \cvdate{2026.03} JunYoung Park$^*$, \me, and Myung-Kyu Yi. ``Dynamics-Aware Action State Flow for Wearable Human Activity Recognition.'' \emph{IEEE Sensors Journal} (IF~4.5). {\footnotesize (2nd author)} \href{https://doi.org/10.1109/JSEN.2026.3675557}{DOI}.
+
+\medskip
+\indd \cvdate{2026.03} \me$^*$ and Myung-Kyu Yi. ``Robust Sensor-Based Activity Recognition via Physics-Aware Disentangled Representation Learning and Feature-wise Linear Modulation Conditioning.'' \emph{IEEE Sensors Journal} (IF~4.5). \href{https://doi.org/10.1109/JSEN.2026.3673698}{DOI} \textbullet\ \href{https://github.com/lky473736/PADR}{Code (PADR)}.
+
+\medskip
+\indd \cvdate{2026.02} \me$^*$ and Myung-Kyu Yi. ``CAP-SSM: Context-Aware Prototypes and Selective State-Space Modeling for Efficient Wearable Human Activity Recognition.'' \emph{IEEE Sensors Journal} (IF~4.5). \href{https://doi.org/10.1109/JSEN.2026.3663003}{DOI} \textbullet\ \href{https://github.com/lky473736/CAP-SSM}{Code (CAP-SSM)}.
+
+\medskip
+\indd \cvdate{2026.01} \me$^*$ and Myung-Kyu Yi. ``Prototype-Guided Physics-Modulated Perceiver for Human Activity Recognition.'' \emph{IEEE Internet of Things Journal} (IF~8.9). \href{https://doi.org/10.1109/JIOT.2026.3658863}{DOI} \textbullet\ \href{https://github.com/lky473736/P2-Perceiver}{Code (P2-Perceiver)}.
+
+\medskip
+\indd \cvdate{2025.09} \me$^*$ and Myung-Kyu Yi. ``Contrastive Learning for Zero-Shot Human Activity Recognition Using Labeled Simple Actions on Wearable Devices.'' \emph{IEEE Sensors Journal} (IF~4.5). \href{https://doi.org/10.1109/JSEN.2025.3613260}{DOI} \textbullet\ \href{https://github.com/lky473736/ZSL-HAR}{Code (ZSL-HAR)}.
+
+\bigskip
+\vspace{0.25cm}
+
+%%%------------------------------------------------------------------------
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}research \newline experience}
+
+\indd \cvdate{2025.12--Present} \textbf{Research Intern}, Seoul National University Graduate School of Data Science, \href{https://www.skiml.snu.ac.kr/home}{SKI-ML} (Prof.\ Jay-Yoon Lee), Seoul.
+\begin{subitems}
+\item Structure and Knowledge Injection into Machine Learning (SKI-ML lab)
+\item Spatio-temporal multivariate modeling for large-scale time-series with graph dependencies (\hyperref[pub:stream]{STREAM})
+\item Co-authored \hyperref[pub:neurox]{NeuroX-EEG}, in collaboration with the Connectome Lab (Prof.\ Jiook Cha)
+\end{subitems}
+
+\medskip
+\indd \cvdate{2025.02--2025.06} \textbf{Undergraduate Research Intern}, Seoul National University Hospital, \href{https://sites.google.com/view/snuh-bmi-lab/home}{BMI Lab} (Prof.\ Kwangsoo Kim), Yeongeon, Seoul.
+\begin{subitems}
+\item Biomedical Informatics Lab (SNUH BMI LAB)
+\item Holter Foundation Model and MLOps Development Team
+\end{subitems}
+
+\bigskip
+\vspace{0.25cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}academic \newline service}
+
+\indd \cvdate{2026--Present} \textbf{Reviewer}
+\begin{subitems}
+\item \emph{IEEE Internet of Things Journal}
+\item \emph{Informatics and Health}
+\end{subitems}
+
+\bigskip
+\vspace{0.25cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}teaching \newline experience}
+
+\medskip
+\indd \cvdate{2025.09--Present} \textbf{Math-based University Essay Instructor}, \href{https://www.nonsoolmate.com/}{Nonsoolmate}, Seoul (Remote).
+\begin{subitems}
+\item Grading and coaching students on math-based university admissions essays
+\end{subitems}
+
+\medskip
+\indd \cvdate{2026.01--2026.08} \textbf{High School Math Instructor}, Myungmun Seoil Academy Premium, Seongnam-si.
+\begin{subitems}
+\item CSAT (Suneung) and school exam preparation, STEM track focus
+\end{subitems}
+
+\medskip
+\indd \cvdate{2023.06--2026.06} \textbf{Lead Math Instructor}, Metrix Mathematics Institute (HB Math\&Eng), Seongnam-si.
+\begin{subitems}
+\item Primary instructor for middle and high school students (grades 2--3) and CSAT retakers
+\item Specializing in CSAT preparation for STEM track students
+\end{subitems}
+
+\bigskip
+\vspace{0.25cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}scholarships}
+
+\indd \cvdate{2025.12} \textbf{SCI Publication Scholarship}, Gachon University --- the Highest Honor.
+
+\medskip
+\indd \cvdate{Every semester} \textbf{Academic Excellence Scholarship}, Gachon University.
+
+\medskip
+\indd \cvdate{From 3rd year} \textbf{National Science \& Technology Scholarship}, Ministry of Science and ICT (MSIT).
+
+\medskip
+\indd \cvdate{2024.01} \textbf{Science \& Engineering Excellence Scholarship}, Anyang-Gwacheon Chamber of Commerce and Industry.
+
+\bigskip
+\vspace{0.25cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}honors \newline \& awards}
+
+\medskip
+\indd \cvdate{2026.08} SNU AI Challenge 2026 --- \textbf{Final Rank 21st / 129 Teams} (Team Gyuyeon Lim, solo participant). ``Temporal Event Matching via Permutation-scored Ordering Hard-Negative Listwise Ranking for Chronological Frame Reconstruction with Vision-Language Models.'' \href{https://snuaichallenge.github.io/assets/reports/Gyuyeon\%20Lim.pdf}{Report}.
+
+\medskip
+\indd \cvdate{2026.08} \textbf{Research Division 2nd Place}, 1st Gachon University Computer Engineering--Artificial Intelligence Academic Festival, Gachon University. \href{https://song2du.github.io/ENURI/}{ENURI}.
+
+\medskip
+\indd \cvdate{2026.01} P-Career Catch 2 --- \textbf{Outstanding Completion}, Career Exploration Credit Program, Gachon University. \href{https://github.com/orgs/Palearn-4-P-proj/repositories}{GitHub}.
+
+\medskip
+\indd \cvdate{2025.05} \textbf{Severance Challenge Award}, 2025 Yonsei Yongin Severance Hospital Healthcare Hackathon.
+
+\medskip
+\indd \cvdate{2025.06} \textbf{3rd Place}, AI/SW Day Oral Presentation, Gachon University --- YOLOv5 Children Protection Area detection. \href{https://github.com/lky473736/luxonis}{GitHub}.
+
+\medskip
+\indd \cvdate{2024.10} \textbf{ICPC Seoul Regional Finalist}, Team GPT --- 168th of 376 teams, KINTEX, Goyang-si. \href{https://icpckorea.org/archives/3155}{Official}.
+
+\medskip
+\indd \cvdate{2024.01} \textbf{Grand Prize}, Future Design Project, Gachon University (1st place).
+
+\medskip
+\indd \cvdate{2023.06} \textbf{Grand Prize}, Software Competition, Gachon University (1st place) --- Smart Home with Physical Computing.
+
+\medskip
+\indd \cvdate{2018.11} \textbf{Minister of Oceans and Fisheries Award}, 2018 National Student Science and Invention Competition.
+
+\bigskip
+\vspace{0.25cm}
+
+%%%------------------------------------------------------------------------
+\marginhead{{\vskip 0.3em}certifications}
+
+\indd \cvdate{2026.09} \emph{Language.} \textbf{TEPS} (Test of English Proficiency developed by Seoul National University) --- 340 (Grade 2).
+
+\medskip
+\indd \cvdate{2025.05} \emph{Technical.} \textbf{AICE Associate} (AI Certificate for Everyone), KT.
+
+\end{document}
