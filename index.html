@@ -125,18 +125,16 @@
 </div>
 <p class="rows">8 row(s) returned. * = first / co-first author.</p>
 
-<p class="q" style="margin-top:10px">SELECT * FROM publications WHERE type = 'conference' AND status = 'submitted';</p>
+<p class="q" style="margin-top:10px">SELECT COUNT(*) FROM publications WHERE type = 'conference' AND status = 'preprint';</p>
 <div class="scroll">
 <table class="grid">
-  <thead><tr><th>ID</th><th>Status</th><th>Authors</th><th>Title</th></tr></thead>
+  <thead><tr><th>Count</th><th>Venue</th><th>Note</th></tr></thead>
   <tbody>
-    <tr><td class="id">C-03</td><td class="dt">preprint</td><td>Junha Kim*, <b>Gyuyeon Lim</b>*, Jay-Yoon Lee</td><td>STREAM: Dynamic Channel Graphs with Autoregressive State Propagation for Multivariate Forecasting</td></tr>
-    <tr><td class="id">C-02</td><td class="dt">preprint</td><td>Taeyang Lee*, <b>Gyuyeon Lim</b>, Sebin Lee, Kevin Valencia, Jay-Yoon Lee, Xihaier Luo, Shinjae Yoo, Jiook Cha, David Keetae Park</td><td>NeuroX-EEG: Scalp Field Inpainting for Zero-Shot EEG Super-Resolution</td></tr>
-    <tr><td class="id">C-01</td><td class="dt">preprint</td><td>Yidu Song*, <b>Gyuyeon Lim</b>*, Ahyoung Choi</td><td>ENURI: Evidence Negotiation Using Reasoning over Images</td></tr>
+    <tr><td class="id">3</td><td>ICLR 2027 (under double-blind review)</td><td>3 preprints. Titles and author lists are withheld during the review period in accordance with the ICLR 2027 anonymity policy.</td></tr>
   </tbody>
 </table>
 </div>
-<p class="rows">3 row(s) returned.</p>
+<p class="rows">1 row(s) returned.</p>
 
 <h2 id="experience">TABLE: research_experience</h2>
 <p class="q">SELECT * FROM research_experience ORDER BY period DESC;</p>
@@ -147,8 +145,8 @@
     <tr><td class="id">X-02</td><td class="dt">2025.12&ndash;2026.10</td><td>Research Intern</td><td>SNU Graduate School of Data Science, <a href="https://www.skiml.snu.ac.kr/home">SKI-ML</a> (Prof. Jay-Yoon Lee), Seoul</td>
       <td><ul>
         <li>Structure and Knowledge Injection into Machine Learning lab</li>
-        <li>Spatio-temporal multivariate modeling for large-scale time-series with graph dependencies (STREAM)</li>
-        <li>Co-authored NeuroX-EEG with the Connectome Lab (Prof. Jiook Cha)</li>
+        <li>Spatio-temporal multivariate modeling for large-scale time-series with graph dependencies</li>
+        <li>Collaborative research with the Connectome Lab (Prof. Jiook Cha)</li>
       </ul></td></tr>
     <tr><td class="id">X-01</td><td class="dt">2025.02&ndash;2025.06</td><td>Undergraduate Research Intern</td><td>Seoul National University Hospital, <a href="https://sites.google.com/view/snuh-bmi-lab/home">BMI Lab</a> (Prof. Kwangsoo Kim), Seoul</td>
       <td><ul>
@@ -210,7 +208,7 @@
   <thead><tr><th>ID</th><th>Date</th><th>Award</th><th>Event</th><th>Links</th></tr></thead>
   <tbody>
     <tr><td class="id">A-09</td><td class="dt">2026.08</td><td>Final rank 21st / 129 teams (solo)</td><td>SNU AI Challenge 2026 &mdash; &ldquo;Temporal Event Matching via Permutation-scored Ordering Hard-Negative Listwise Ranking for Chronological Frame Reconstruction with Vision-Language Models&rdquo;</td><td><a href="https://snuaichallenge.github.io/assets/reports/Gyuyeon%20Lim.pdf">Report</a></td></tr>
-    <tr><td class="id">A-08</td><td class="dt">2026.08</td><td>Research Division 2nd Place</td><td>1st Gachon University Computer Engineering&ndash;AI Academic Festival</td><td><a href="https://song2du.github.io/ENURI/">ENURI</a></td></tr>
+    <tr><td class="id">A-08</td><td class="dt">2026.08</td><td>Research Division 2nd Place</td><td>1st Gachon University Computer Engineering&ndash;AI Academic Festival</td><td>&nbsp;</td></tr>
     <tr><td class="id">A-07</td><td class="dt">2026.01</td><td>Outstanding Completion</td><td>P-Career Catch 2, Career Exploration Credit Program, Gachon University</td><td><a href="https://github.com/orgs/Palearn-4-P-proj/repositories">GitHub</a></td></tr>
     <tr><td class="id">A-06</td><td class="dt">2025.06</td><td>3rd Place</td><td>AI/SW Day Oral Presentation, Gachon University &mdash; YOLOv5 Children Protection Area detection</td><td><a href="https://github.com/lky473736/luxonis">GitHub</a></td></tr>
     <tr><td class="id">A-05</td><td class="dt">2025.05</td><td>Severance Challenge Award</td><td>2025 Yonsei Yongin Severance Hospital Healthcare Hackathon</td><td>&nbsp;</td></tr>
